@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio profesional de [Tu Nombre] - Desarrollador Web">
+    <title>Portafolio | Desarrollador Web</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header con navegación -->
+    <header class="header" role="banner">
+        <nav class="nav" role="navigation" aria-label="Navegación principal">
+            <div class="nav__container">
+                <a href="#inicio" class="nav__logo">Juan Acevedo</a>
+                <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav__menu">
+                    <li><a href="#inicio" class="nav__link">Inicio</a></li>
+                    <li><a href="#sobre-mi" class="nav__link">Sobre mí</a></li>
+                    <li><a href="#proyectos" class="nav__link">Proyectos</a></li>
+                    <li><a href="#habilidades" class="nav__link">Habilidades</a></li>
+                    <li><a href="#contacto" class="nav__link">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero" aria-labelledby="hero-title">
+            <div class="hero__container">
+                <h1 id="hero-title" class="hero__title">
+                    Hola, soy <span class="highlight">Juan Acevedo</span>
+                </h1>
+                <p class="hero__subtitle">Desarrollador Web Full Stack</p>
+                <p class="hero__description">
+                    Creo experiencias digitales excepcionales con código limpio y diseño moderno
+                </p>
+                <div class="hero__cta">
+                    <a href="#proyectos" class="btn btn--primary">Ver proyectos</a>
+                    <a href="#contacto" class="btn btn--secondary">Contáctame</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre mí -->
+        <section id="sobre-mi" class="about" aria-labelledby="about-title">
+            <div class="container">
+                <h2 id="about-title" class="section__title">Sobre mí</h2>
+                <div class="about__content">
+                    <div class="about__image">
+                        <img 
+                            src="images/WhatsApp Image 2026-06-28 at 12.45.42 PM.jpeg" 
+                            alt="Foto de perfil de [Tu Nombre]" 
+                            loading="lazy"
+                            width="400"
+                            height="400"
+                        >
+                    </div>
+                    <div class="about__text">
+                        <p>
+                            Soy un desarrollador apasionado por crear soluciones web innovadoras.
+                            Con experiencia en tecnologías modernas, me especializo en construir
+                            aplicaciones rápidas, accesibles y visualmente atractivas.
+                        </p>
+                        <p>
+                            Mi enfoque se centra en escribir código limpio, mantenerme actualizado
+                            con las últimas tendencias y colaborar efectivamente en equipos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyectos -->
+        <section id="proyectos" class="projects" aria-labelledby="projects-title">
+            <div class="container">
+                <h2 id="projects-title" class="section__title">Proyectos destacados</h2>
+                <div class="projects__grid">
+                    <article class="project-card">
+                        <img 
+                            src="images/Python-logo-notext.svg.png" 
+                            alt="Captura del proyecto 1" 
+                            loading="lazy"
+                            width="600"
+                            height="400"
+                        >
+                        <div class="project-card__content">
+                            <h3>Proyecto 1</h3>
+                            <p>
+                                Sistema de navegacion dirigido hacia la comunidad de campuslands en la que cada integrante segun su rol tiene un menu de opciones que le puede facilitar su acceso a informacion sobre campuslands    
+                            </p>
+                            <div class="project-card__links">
+                                <a href="https://github.com/Jonathanluna0803/Proyecto_Python_LunaJonathan_AcevedoJuan/blob/main/Proyecto_Python" class="btn btn--small btn--outline" target="_blank" rel="noopener">Código</a>
+                                <a href="https://github.com/Jonathanluna0803/Proyecto_Python_LunaJonathan_AcevedoJuan.git" class="btn btn--small btn--outline" target="_blank" rel="noopener">Repositorio</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <img 
+                            src="images/WhatsApp Image 2026-06-28 at 3.55.08 PM.jpeg" 
+                            alt="Captura del proyecto 2" 
+                            loading="lazy"
+                            width="600"
+                            height="400"
+                        >
+                        <div class="project-card__content">
+                            <h3>Proyecto 2</h3>
+                            <p>
+                                Es una maqueta de lo que seria el sistema de una tienda con el fin de proyectar la simulacion de una pagina para uso de los campers en donde se busque facilitar el acceso a productos mas economicos y relacionados con material de estudio que puede ser util en campus y sus diferentes clases    
+                            </p>
+                            <div class="project-card__links">
+                                <a href="https://github.com/JuanAcevedo124/Proyecto-HTML-y-CSS/tree/main/CampusShop" class="btn btn--small btn--outline" target="_blank" rel="noopener">Código</a>
+                                <a href="https://github.com/JuanAcevedo124/Proyecto-HTML-y-CSS.git" class="btn btn--small btn--outline" target="_blank" rel="noopener">Repositorio</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <img 
+                            src="images/javascript.png" 
+                            alt="Captura del proyecto 3" 
+                            loading="lazy"
+                            width="600"
+                            height="400"
+                        >
+                        <div class="project-card__content">
+                            <h3>Proyecto 3</h3>
+                            <p>
+                                Sitio web responsivo y funcional para la gestión de reservas de habitaciones, desarrollado con estándares modernos de desarrollo web. Simula un entorno completo de hotelería con autenticación, disponibilidad en tiempo real, prevención de solapamientos y panel administrativo.    
+                            </p>
+                            <div class="project-card__links">
+                                <a href="https://github.com/JuanAcevedo124/Proyecto-Javascript/blob/master/index.html" class="btn btn--small btn--outline" target="_blank" rel="noopener">Código</a>
+                                <a href="https://github.com/JuanAcevedo124/Proyecto-Javascript" class="btn btn--small btn--outline" target="_blank" rel="noopener">Repositorio</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Repite para más proyectos -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Habilidades -->
+        <section id="habilidades" class="skills" aria-labelledby="skills-title">
+            <div class="container">
+                <h2 id="skills-title" class="section__title">Habilidades técnicas</h2>
+                <div class="skills__grid">
+                    <div class="skill-category">
+                        <h3>Frontend</h3>
+                        <ul>
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>React</li>
+                            <li>Responsive Design</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Backend</h3>
+                        <ul>
+                            <li>Node.js</li>
+                            <li>Express</li>
+                            <li>Bases de datos</li>
+                            <li>APIs REST</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Herramientas</h3>
+                        <ul>
+                            <li>Git & GitHub</li>
+                            <li>VS Code</li>
+                            <li>Figma</li>
+                            <li>Terminal</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto" class="contact" aria-labelledby="contact-title">
+            <div class="container">
+                <h2 id="contact-title" class="section__title">Hablemos</h2>
+                <p class="contact__subtitle">¿Tienes un proyecto en mente? ¡Conversemos!</p>
+                <div class="contact__links">
+                    <a href="mailto:juanacevedo1240@gmail.com" class="contact__link">
+                        <span>📧</span> Email
+                    </a>
+                    <a href="https://github.com/JuanAcevedo124" class="contact__link" target="_blank" rel="noopener">
+                        <span>💻</span> GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; 2026 Juan Acevedo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
