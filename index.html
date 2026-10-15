@@ -3,153 +3,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio profesional de [Tu Nombre] - Desarrollador Web">
-    <title>Portafolio | Desarrollador Web</title>
+    <meta name="description" content="Juan Acevedo — Desarrollador Web Full Stack con alma musical. Portafolio estilo concierto: tracks, vinilos y código con ritmo.">
+    <title>Juan Acevedo ♪ Live Code Session</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <!-- Header con navegación -->
+<body class="is-playing">
+
+    <!-- Luces de escenario -->
+    <div class="stage-lights" aria-hidden="true">
+        <span class="light light--1"></span>
+        <span class="light light--2"></span>
+        <span class="light light--3"></span>
+    </div>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="float-notes" aria-hidden="true">
+        <span>♪</span><span>♫</span><span>♩</span><span>♬</span><span>♪</span><span>♫</span><span>♩</span><span>♬</span>
+    </div>
+
+    <!-- Header estilo reproductor -->
     <header class="header" role="banner">
         <nav class="nav" role="navigation" aria-label="Navegación principal">
             <div class="nav__container">
-                <a href="#inicio" class="nav__logo">Juan Acevedo</a>
+                <a href="#inicio" class="nav__logo">
+                    <span class="logo-vinyl" aria-hidden="true"><span></span></span>
+                    JUAN ACEVEDO <em>live</em>
+                </a>
                 <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span></span><span></span><span></span>
                 </button>
                 <ul class="nav__menu">
-                    <li><a href="#inicio" class="nav__link">Inicio</a></li>
-                    <li><a href="#sobre-mi" class="nav__link">Sobre mí</a></li>
-                    <li><a href="#proyectos" class="nav__link">Proyectos</a></li>
-                    <li><a href="#habilidades" class="nav__link">Habilidades</a></li>
-                    <li><a href="#contacto" class="nav__link">Contacto</a></li>
+                    <li><a href="#inicio" class="nav__link"><b>01</b>Intro</a></li>
+                    <li><a href="#sobre-mi" class="nav__link"><b>02</b>Artista</a></li>
+                    <li><a href="#proyectos" class="nav__link"><b>03</b>Discografía</a></li>
+                    <li><a href="#habilidades" class="nav__link"><b>04</b>Mezclador</a></li>
+                    <li><a href="#contacto" class="nav__link nav__link--ticket">🎟 Encore</a></li>
+                    <li>
+                        <button id="playToggleNav" class="mini-play" aria-label="Pausar animación">
+                            <span class="mini-play__bars"><i></i><i></i><i></i><i></i></span>
+                            <span class="mini-play__label">LIVE</span>
+                        </button>
+                    </li>
                 </ul>
             </div>
+            <div class="nav__progress"><span id="scrollProgress"></span></div>
         </nav>
     </header>
 
     <main>
-        <!-- Hero Section -->
+        <!-- HERO / ESCENARIO -->
         <section id="inicio" class="hero" aria-labelledby="hero-title">
+            <div class="staff" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span>
+                <b class="clef">𝄞</b>
+            </div>
+
             <div class="hero__container">
-                <h1 id="hero-title" class="hero__title">
-                    Hola, soy <span class="highlight">Juan Acevedo</span>
-                </h1>
-                <p class="hero__subtitle">Desarrollador Web Full Stack</p>
-                <p class="hero__description">
-                    Creo experiencias digitales excepcionales con código limpio y diseño moderno
-                </p>
-                <div class="hero__cta">
-                    <a href="#proyectos" class="btn btn--primary">Ver proyectos</a>
-                    <a href="#contacto" class="btn btn--secondary">Contáctame</a>
+                <div class="hero__text">
+                    <p class="hero__kicker">
+                        <span class="live-dot"></span> ON STAGE · BOGOTÁ — FULL STACK SESSION
+                        <span class="hero__bpm">128 BPM</span>
+                    </p>
+                    <h1 id="hero-title" class="hero__title">
+                        <span class="line line--small">Hola, soy</span>
+                        <span class="line line--name">JUAN <span class="outline">ACEVEDO</span></span>
+                        <span class="line line--role">compongo <span id="typewriter">interfaces que suenan bien</span><span class="caret">_</span></span>
+                    </h1>
+                    <p class="hero__description">
+                        Desarrollador Web Full Stack. Transformo ideas en experiencias digitales
+                        con el ritmo del frontend y el bajo sólido del backend.
+                    </p>
+
+                    <div class="eq eq--hero" aria-hidden="true">
+                        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                    </div>
+
+                    <div class="hero__cta">
+                        <a href="#proyectos" class="btn btn--play"><span class="btn__icon">▶</span> Escuchar proyectos</a>
+                        <a href="#contacto" class="btn btn--ghost">🎟 Backstage pass</a>
+                    </div>
+
+                    <div class="hero__meta">
+                        <div><strong>3+</strong><small>tracks publicados</small></div>
+                        <div><strong>Full Stack</strong><small>front + back</small></div>
+                        <div><strong>∞</strong><small>loops de café</small></div>
+                    </div>
+                </div>
+
+                <div class="hero__visual">
+                    <div class="turntable">
+                        <div class="turntable__ring"></div>
+                        <div class="vinyl" id="heroVinyl" aria-hidden="true">
+                            <div class="vinyl__grooves"></div>
+                            <div class="vinyl__label">
+                                <strong>JA</strong>
+                                <small>SIDE A · 33 RPM</small>
+                            </div>
+                            <div class="vinyl__hole"></div>
+                        </div>
+                        <div class="needle" aria-hidden="true"></div>
+                        <div class="now-spinning">
+                            <span class="spin-disc"></span>
+                            <div>
+                                <small>NOW SPINNING</small>
+                                <strong>Song.mp3 — instrumental propio ♪</strong>
+                            </div>
+                            <canvas id="visualizer" width="220" height="52"></canvas>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <a href="#sobre-mi" class="scroll-hint">scroll para el drop <i>↓</i></a>
         </section>
 
-        <!-- Sobre mí -->
-        <section id="sobre-mi" class="about" aria-labelledby="about-title">
+        <!-- MARQUESINA -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee__track">
+                <span>HTML5 ♪ CSS3 ♫ JAVASCRIPT ♩ PYTHON ♬ REACT ♪ NODE.JS ♫ GIT ♩ RESPONSIVE ♬ UI / UX ♪&nbsp;</span>
+                <span>HTML5 ♪ CSS3 ♫ JAVASCRIPT ♩ PYTHON ♬ REACT ♪ NODE.JS ♫ GIT ♩ RESPONSIVE ♬ UI / UX ♪&nbsp;</span>
+            </div>
+        </div>
+
+        <!-- SOBRE MI / TRACK 01 -->
+        <section id="sobre-mi" class="about reveal" aria-labelledby="about-title">
             <div class="container">
-                <h2 id="about-title" class="section__title">Sobre mí</h2>
+                <p class="track-label">Track 01 · Lado A — El artista</p>
+                <h2 id="about-title" class="section__title">Detrás del <span class="neon">micrófono</span></h2>
                 <div class="about__content">
-                    <div class="about__image">
-                        <img 
-                            src="images/WhatsApp Image 2026-06-28 at 12.45.42 PM.jpeg" 
-                            alt="Foto de perfil de [Tu Nombre]" 
-                            loading="lazy"
-                            width="400"
-                            height="400"
-                        >
+                    <div class="about__cover">
+                        <div class="cover-art">
+                            <div class="cover-art__top">JA · DEBUT ALBUM</div>
+                            <div class="cover-art__face">JA</div>
+                            <div class="cover-art__bottom">
+                                <span>CÓDIGO · RITMO · DISEÑO</span>
+                                <span>2026</span>
+                            </div>
+                        </div>
+                        <div class="cover-vinyl" aria-hidden="true"></div>
+                        <p class="cover-caption">◉ portada del artista — pasa el cursor para sacar el vinilo</p>
                     </div>
                     <div class="about__text">
-                        <p>
-                            Soy un desarrollador apasionado por crear soluciones web innovadoras.
-                            Con experiencia en tecnologías modernas, me especializo en construir
-                            aplicaciones rápidas, accesibles y visualmente atractivas.
+                        <p class="dropcap">
+                            Soy un desarrollador que produce la web como si fuera un disco:
+                            cada sección tiene su tempo, cada componente su timbre y cada
+                            deploy es un lanzamiento.
                         </p>
                         <p>
-                            Mi enfoque se centra en escribir código limpio, mantenerme actualizado
-                            con las últimas tendencias y colaborar efectivamente en equipos.
+                            Me especializo en construir aplicaciones rápidas, accesibles y
+                            visualmente atractivas, con código limpio como una buena mezcla
+                            y colaboración afinada en equipo.
                         </p>
+                        <ul class="setlist">
+                            <li><span>♪ Verso 1</span> Frontend que engancha al primer beat</li>
+                            <li><span>♪ Coro</span> Backend sólido que sostiene la canción</li>
+                            <li><span>♪ Puente</span> Diseño responsive para todos los escenarios</li>
+                        </ul>
+                        <div class="about__chips">
+                            <span>🎧 Escucho al usuario</span>
+                            <span>🎛 Mezclo diseño + código</span>
+                            <span>🔥 Masterizo el detalle</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Proyectos -->
+        <!-- PROYECTOS / DISCOGRAFÍA -->
         <section id="proyectos" class="projects" aria-labelledby="projects-title">
             <div class="container">
-                <h2 id="projects-title" class="section__title">Proyectos destacados</h2>
+                <p class="track-label track-label--center">Track 02 · 03 · 04 — Discografía</p>
+                <h2 id="projects-title" class="section__title">Mis <span class="neon">lanzamientos</span></h2>
+                <p class="section__sub">Cada proyecto es un single. Dale play a la descripción y revisa el código en GitHub.</p>
+
                 <div class="projects__grid">
-                    <article class="project-card">
-                        <img 
-                            src="images/Python-logo-notext.svg.png" 
-                            alt="Captura del proyecto 1" 
-                            loading="lazy"
-                            width="600"
-                            height="400"
-                        >
-                        <div class="project-card__content">
-                            <h3>Proyecto 1</h3>
-                            <p>
-                                Sistema de navegacion dirigido hacia la comunidad de campuslands en la que cada integrante segun su rol tiene un menu de opciones que le puede facilitar su acceso a informacion sobre campuslands    
-                            </p>
-                            <div class="project-card__links">
-                                <a href="https://github.com/Jonathanluna0803/Proyecto_Python_LunaJonathan_AcevedoJuan/blob/main/Proyecto_Python" class="btn btn--small btn--outline" target="_blank" rel="noopener">Código</a>
-                                <a href="https://github.com/Jonathanluna0803/Proyecto_Python_LunaJonathan_AcevedoJuan.git" class="btn btn--small btn--outline" target="_blank" rel="noopener">Repositorio</a>
+                    <article class="disc reveal">
+                        <div class="disc__art disc__art--py">
+                            <span class="disc__genre">PYTHON · SINGLE 01</span>
+                            <span class="disc__emoji">🐍</span>
+                            <div class="disc__vinyl" aria-hidden="true"></div>
+                            <span class="disc__time">3:42</span>
+                        </div>
+                        <div class="disc__content">
+                            <h3>Campus Navigator <small>— feat. Campuslands</small></h3>
+                            <div class="disc__eq" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+                            <p>Sistema de navegación por roles para la comunidad de Campuslands: cada integrante tiene su propio menú y acceso rápido a la información.</p>
+                            <div class="disc__links">
+                                <a href="https://github.com/Jonathanluna0803/Proyecto_Python_LunaJonathan_AcevedoJuan/blob/main/Proyecto_Python" class="btn btn--small btn--play" target="_blank" rel="noopener">▶ Código</a>
+                                <a href="https://github.com/Jonathanluna0803/Proyecto_Python_LunaJonathan_AcevedoJuan.git" class="btn btn--small btn--ghost" target="_blank" rel="noopener">Repositorio</a>
                             </div>
                         </div>
                     </article>
-                    <article class="project-card">
-                        <img 
-                            src="images/WhatsApp Image 2026-06-28 at 3.55.08 PM.jpeg" 
-                            alt="Captura del proyecto 2" 
-                            loading="lazy"
-                            width="600"
-                            height="400"
-                        >
-                        <div class="project-card__content">
-                            <h3>Proyecto 2</h3>
-                            <p>
-                                Es una maqueta de lo que seria el sistema de una tienda con el fin de proyectar la simulacion de una pagina para uso de los campers en donde se busque facilitar el acceso a productos mas economicos y relacionados con material de estudio que puede ser util en campus y sus diferentes clases    
-                            </p>
-                            <div class="project-card__links">
-                                <a href="https://github.com/JuanAcevedo124/Proyecto-HTML-y-CSS/tree/main/CampusShop" class="btn btn--small btn--outline" target="_blank" rel="noopener">Código</a>
-                                <a href="https://github.com/JuanAcevedo124/Proyecto-HTML-y-CSS.git" class="btn btn--small btn--outline" target="_blank" rel="noopener">Repositorio</a>
+
+                    <article class="disc reveal">
+                        <div class="disc__art disc__art--shop">
+                            <span class="disc__genre">HTML + CSS · SINGLE 02</span>
+                            <span class="disc__emoji">🛍️</span>
+                            <div class="disc__vinyl" aria-hidden="true"></div>
+                            <span class="disc__time">4:05</span>
+                        </div>
+                        <div class="disc__content">
+                            <h3>CampusShop <small>— maqueta e-commerce</small></h3>
+                            <div class="disc__eq" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+                            <p>Maqueta de tienda para campers: productos económicos y material de estudio, simulando una página real de compras del campus.</p>
+                            <div class="disc__links">
+                                <a href="https://github.com/JuanAcevedo124/Proyecto-HTML-y-CSS/tree/main/CampusShop" class="btn btn--small btn--play" target="_blank" rel="noopener">▶ Código</a>
+                                <a href="https://github.com/JuanAcevedo124/Proyecto-HTML-y-CSS.git" class="btn btn--small btn--ghost" target="_blank" rel="noopener">Repositorio</a>
                             </div>
                         </div>
                     </article>
-                    <article class="project-card">
-                        <img 
-                            src="images/javascript.png" 
-                            alt="Captura del proyecto 3" 
-                            loading="lazy"
-                            width="600"
-                            height="400"
-                        >
-                        <div class="project-card__content">
-                            <h3>Proyecto 3</h3>
-                            <p>
-                                Sitio web responsivo y funcional para la gestión de reservas de habitaciones, desarrollado con estándares modernos de desarrollo web. Simula un entorno completo de hotelería con autenticación, disponibilidad en tiempo real, prevención de solapamientos y panel administrativo.    
-                            </p>
-                            <div class="project-card__links">
-                                <a href="https://github.com/JuanAcevedo124/Proyecto-Javascript/blob/master/index.html" class="btn btn--small btn--outline" target="_blank" rel="noopener">Código</a>
-                                <a href="https://github.com/JuanAcevedo124/Proyecto-Javascript" class="btn btn--small btn--outline" target="_blank" rel="noopener">Repositorio</a>
+
+                    <article class="disc reveal">
+                        <div class="disc__art disc__art--js">
+                            <span class="disc__genre">JAVASCRIPT · SINGLE 03</span>
+                            <span class="disc__emoji">🏨</span>
+                            <div class="disc__vinyl" aria-hidden="true"></div>
+                            <span class="disc__time">5:18</span>
+                        </div>
+                        <div class="disc__content">
+                            <h3>Hotel Manager <small>— full experience</small></h3>
+                            <div class="disc__eq" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+                            <p>Gestión de reservas responsiva con autenticación, disponibilidad en tiempo real, anti-solapamientos y panel administrativo.</p>
+                            <div class="disc__links">
+                                <a href="https://github.com/JuanAcevedo124/Proyecto-Javascript/blob/master/index.html" class="btn btn--small btn--play" target="_blank" rel="noopener">▶ Código</a>
+                                <a href="https://github.com/JuanAcevedo124/Proyecto-Javascript" class="btn btn--small btn--ghost" target="_blank" rel="noopener">Repositorio</a>
                             </div>
                         </div>
                     </article>
-                    <!-- Repite para más proyectos -->
                 </div>
             </div>
         </section>
 
-        <!-- Habilidades -->
+        <!-- HABILIDADES / MEZCLADOR -->
         <section id="habilidades" class="skills" aria-labelledby="skills-title">
             <div class="container">
-                <h2 id="skills-title" class="section__title">Habilidades técnicas</h2>
-                <div class="skills__grid">
-                    <div class="skill-category">
-                        <h3>Frontend</h3>
+                <p class="track-label track-label--center">Track 05 — Mezclador</p>
+                <h2 id="skills-title" class="section__title">Consola de <span class="neon">habilidades</span></h2>
+                <p class="section__sub">Dale play a tu instrumental y juega con los faders: cada canal filtra tu canción en vivo.</p>
+
+                <div class="song-transport reveal">
+                    <button id="songToggle" class="btn btn--play"><span class="btn__icon">▶</span> <span id="songToggleLabel">Tocar mi instrumental</span></button>
+                    <p id="songStatus" class="song-status">⏸ Song.mp3 en pausa — pulsa play (los navegadores exigen un clic para el audio)</p>
+                    <audio id="song" src="audio/Song.mp3" loop preload="auto"></audio>
+                </div>
+
+                <div class="mixer reveal">
+                    <div class="channel" data-band="high">
+                        <div class="channel__leds"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
+                        <h3>🎸 Frontend · Agudos</h3>
+                        <input type="range" class="fader" min="0" max="100" value="90" aria-label="Nivel frontend">
+                        <span class="channel__val">90%</span>
                         <ul>
                             <li>HTML5 & CSS3</li>
                             <li>JavaScript (ES6+)</li>
@@ -157,8 +262,11 @@
                             <li>Responsive Design</li>
                         </ul>
                     </div>
-                    <div class="skill-category">
-                        <h3>Backend</h3>
+                    <div class="channel channel--bass" data-band="low">
+                        <div class="channel__leds"><i class="on"></i><i class="on"></i><i></i><i></i></div>
+                        <h3>🎹 Backend · Graves</h3>
+                        <input type="range" class="fader" min="0" max="100" value="75" aria-label="Nivel backend">
+                        <span class="channel__val">75%</span>
                         <ul>
                             <li>Node.js</li>
                             <li>Express</li>
@@ -166,8 +274,11 @@
                             <li>APIs REST</li>
                         </ul>
                     </div>
-                    <div class="skill-category">
-                        <h3>Herramientas</h3>
+                    <div class="channel channel--drums" data-band="mid">
+                        <div class="channel__leds"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
+                        <h3>🥁 Herramientas · Medios</h3>
+                        <input type="range" class="fader" min="0" max="100" value="85" aria-label="Nivel herramientas">
+                        <span class="channel__val">85%</span>
                         <ul>
                             <li>Git & GitHub</li>
                             <li>VS Code</li>
@@ -179,28 +290,53 @@
             </div>
         </section>
 
-        <!-- Contacto -->
-        <section id="contacto" class="contact" aria-labelledby="contact-title">
+        <!-- CONTACTO / ENCORE -->
+        <section id="contacto" class="contact reveal" aria-labelledby="contact-title">
             <div class="container">
-                <h2 id="contact-title" class="section__title">Hablemos</h2>
-                <p class="contact__subtitle">¿Tienes un proyecto en mente? ¡Conversemos!</p>
-                <div class="contact__links">
-                    <a href="mailto:juanacevedo1240@gmail.com" class="contact__link">
-                        <span>📧</span> Email
-                    </a>
-                    <a href="https://github.com/JuanAcevedo124" class="contact__link" target="_blank" rel="noopener">
-                        <span>💻</span> GitHub
-                    </a>
+                <p class="track-label track-label--center">Último track — Encore</p>
+                <h2 id="contact-title" class="section__title">¿Pedimos <span class="neon">otra canción?</span></h2>
+                <p class="contact__subtitle">¿Tienes un proyecto en mente? Te regalo el backstage pass — conversemos.</p>
+
+                <div class="ticket">
+                    <div class="ticket__stub">
+                        <strong>ADMIT ONE</strong>
+                        <span>★ ★ ★</span>
+                        <small>JA LIVE 2026</small>
+                    </div>
+                    <div class="ticket__main">
+                        <p class="ticket__row"><span>ARTISTA</span> Juan Acevedo — Full Stack</p>
+                        <p class="ticket__row"><span>VENUE</span> Tu bandeja de entrada</p>
+                        <div class="contact__links">
+                            <a href="mailto:juanacevedo1240@gmail.com" class="contact__link contact__link--vip">📧 Email directo</a>
+                            <a href="https://github.com/JuanAcevedo124" class="contact__link" target="_blank" rel="noopener">💻 GitHub</a>
+                        </div>
+                    </div>
+                    <div class="ticket__perf"></div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="footer" role="contentinfo">
-        <div class="container">
-            <p>&copy; 2026 Juan Acevedo. Todos los derechos reservados.</p>
+        <div class="container footer__inner">
+            <p class="footer__eq" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></p>
+            <p>© 2026 Juan Acevedo · Gracias por escuchar hasta el final ♪</p>
+            <p class="footer__small">Hecho con código, café y buen ritmo.</p>
         </div>
     </footer>
+
+    <!-- Player fijo estilo Spotify -->
+    <div class="player" role="complementary" aria-label="Reproductor del portafolio">
+        <button id="playToggle" class="player__btn" aria-label="Tocar instrumental">▶</button>
+        <div class="player__info">
+            <span class="player__cover">♪</span>
+            <div>
+                <strong id="playerTrack">Song.mp3 — instrumental propio</strong>
+                <small><span id="songTime">0:00 / 0:00</span> · scroll para cambiar de track · <span id="playerTime">0:00</span></small>
+            </div>
+        </div>
+        <div class="player__bar"><span id="playerBar"></span></div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>
