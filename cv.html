@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hoja de vida de Juan José Acevedo Morales, desarrollador de software junior.">
+    <title>Hoja de vida | Juan José Acevedo Morales</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --text: #1f2933; --muted: #52606d; --primary: #1d4ed8; --border: #d9dee5; }
+        * { box-sizing: border-box; }
+        body { margin: 0; background: #eef1f5; font-family: "Inter", system-ui, sans-serif; color: var(--text); font-size: 14px; line-height: 1.55; }
+        .toolbar { max-width: 820px; margin: 20px auto 0; padding: 0 16px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; }
+        .toolbar a, .toolbar button { font: inherit; font-weight: 600; padding: .55em 1.1em; border-radius: 8px; border: 2px solid var(--primary); cursor: pointer; text-decoration: none; }
+        .toolbar a { color: var(--primary); background: #fff; }
+        .toolbar .dl { background: var(--primary); color: #fff; }
+        .page { max-width: 820px; margin: 16px auto 40px; background: #fff; padding: 48px 52px; box-shadow: 0 2px 10px rgba(0,0,0,.08); }
+        h1 { font-size: 28px; margin: 0; }
+        .role { color: var(--primary); font-weight: 600; font-size: 16px; margin: 2px 0 10px; }
+        .contact { display: flex; flex-wrap: wrap; gap: 4px 18px; color: var(--muted); padding: 0; margin: 0; list-style: none; }
+        .contact a { color: var(--muted); }
+        h2 { font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--primary); border-bottom: 2px solid var(--border); padding-bottom: 4px; margin: 26px 0 10px; }
+        p { margin: 0 0 8px; }
+        .item { margin-bottom: 12px; }
+        .item h3 { font-size: 14.5px; margin: 0; }
+        .item .meta { color: var(--muted); font-size: 13px; }
+        .item ul { margin: 4px 0 0; padding-left: 18px; }
+        .skills { display: grid; grid-template-columns: 170px 1fr; gap: 4px 12px; margin: 0; }
+        .skills dt { font-weight: 600; }
+        .skills dd { margin: 0; }
+        .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; }
+        @media (max-width: 640px) {
+            .page { padding: 28px 20px; }
+            .skills, .cols { grid-template-columns: 1fr; }
+            .skills dd { margin-bottom: 6px; }
+        }
+        @page { size: A4; margin: 14mm; }
+        @media print {
+            body { background: #fff; font-size: 12.5px; }
+            .toolbar { display: none; }
+            .page { box-shadow: none; margin: 0; padding: 0; max-width: none; }
+            h2 { margin-top: 18px; }
+            a { text-decoration: none; }
+            .item { break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="toolbar">
+        <a href="index.html">← Volver al portafolio</a>
+        <span>
+            <a class="dl" href="cv/Juan-Jose-Acevedo-Morales-CV.pdf" download>Descargar PDF</a>
+            <button type="button" onclick="window.print()">Imprimir</button>
+        </span>
+    </div>
+
+    <main class="page">
+        <header>
+            <h1>Juan José Acevedo Morales</h1>
+            <p class="role">Desarrollador de Software Junior · Backend Java &amp; Full Stack</p>
+            <ul class="contact">
+                <li>Bucaramanga, Santander, Colombia</li>
+                <li>+57 321 305 1277</li>
+                <li><a href="mailto:juanacevedo1240@gmail.com">juanacevedo1240@gmail.com</a></li>
+                <li><a href="https://www.linkedin.com/in/juan-acevedo-b24759450/">linkedin.com/in/juan-acevedo-b24759450</a></li>
+                <li><a href="https://github.com/JuanAcevedo124">github.com/JuanAcevedo124</a></li>
+                <li><a href="https://juanacevedo124.github.io/Portafolio/">juanacevedo124.github.io/Portafolio</a></li>
+            </ul>
+        </header>
+
+        <section>
+            <h2>Perfil profesional</h2>
+            <p>
+                Desarrollador de software en formación en Campuslands, con enfoque en backend con Java y MySQL
+                y experiencia práctica en desarrollo web con JavaScript. He construido sistemas de gestión con
+                programación orientada a objetos, principios SOLID, patrones de diseño y conexión a bases de datos
+                con JDBC, además de sitios responsive que consumen APIs REST. Persistente, de aprendizaje rápido
+                y orientado a entregar soluciones que funcionen correctamente.
+            </p>
+            <p>
+                <strong>Objetivo:</strong> integrarme a un equipo de desarrollo como desarrollador junior o practicante,
+                aportar en servicios backend y aplicaciones web, y seguir creciendo bajo buenas prácticas y metodologías ágiles.
+            </p>
+        </section>
+
+        <section>
+            <h2>Conocimientos técnicos</h2>
+            <dl class="skills">
+                <dt>Lenguajes</dt><dd>Java, JavaScript (ES6+), Python, SQL, HTML5, CSS3</dd>
+                <dt>Backend</dt><dd>POO, SOLID, patrones DAO / Singleton / Strategy / Observer / Facade, MVC, JDBC, Spring Boot (básico)</dd>
+                <dt>Bases de datos</dt><dd>MySQL: modelado entidad-relación, normalización, funciones, triggers, vistas</dd>
+                <dt>Frontend</dt><dd>Diseño responsive (Flexbox, Grid), Web Components, DOM, localStorage</dd>
+                <dt>APIs</dt><dd>Consumo de APIs REST con fetch y async/await, manejo de errores</dd>
+                <dt>Herramientas</dt><dd>Git, GitHub, GitFlow, Docker / Docker Compose, VS Code, NetBeans, n8n</dd>
+                <dt>Pruebas</dt><dd>Depuración, validaciones, excepciones personalizadas; aprendiendo pruebas unitarias</dd>
+                <dt>Metodologías</dt><dd>Scrum en proyectos de equipo</dd>
+            </dl>
+        </section>
+
+        <section>
+            <h2>Proyectos</h2>
+            <div class="item">
+                <h3>CrediYa S.A.S.: sistema de préstamos y cobros</h3>
+                <p class="meta">Java 17 · MySQL · JDBC · DAO + Singleton · <a href="https://github.com/JuanAcevedo124/CrediYa">github.com/JuanAcevedo124/CrediYa</a></p>
+                <ul>
+                    <li>Gestión de empleados, clientes, préstamos y abonos, con cálculo automático de intereses y cuotas.</li>
+                    <li>Persistencia en archivos y MySQL a la vez, con respaldo en archivos si no hay conexión.</li>
+                </ul>
+            </div>
+            <div class="item">
+                <h3>MediSalud: gestión de citas médicas</h3>
+                <p class="meta">Java · MySQL · Docker Compose · MVC · <a href="https://github.com/JuanAcevedo124/Gestion-de-citas-">github.com/JuanAcevedo124/Gestion-de-citas-</a></p>
+                <ul>
+                    <li>Agendamiento y cancelación de citas con motivo, historia clínica, facturación y reportes.</li>
+                    <li>Patrones Strategy (tarifas), Observer (notificaciones) y Facade; base de datos en Docker.</li>
+                </ul>
+            </div>
+            <div class="item">
+                <h3>Hotel El Rincón del Carmen: sistema de reservas web</h3>
+                <p class="meta">JavaScript · Web Components · HTML5 · CSS3 · <a href="https://github.com/JuanAcevedo124/Proyecto-Javascript">github.com/JuanAcevedo124/Proyecto-Javascript</a></p>
+                <ul>
+                    <li>Autenticación, búsqueda por fechas con cálculo de precio, validación contra reservas cruzadas y panel administrativo.</li>
+                </ul>
+            </div>
+            <div class="item">
+                <h3>Mini portal de Colombia con API</h3>
+                <p class="meta">JavaScript · fetch · API REST · <a href="https://github.com/JuanAcevedo124/Juan-Acevedo-API-COLOMBIA">github.com/JuanAcevedo124/Juan-Acevedo-API-COLOMBIA</a></p>
+                <ul>
+                    <li>Consumo de api-colombia.com con filtros, ordenamiento, estados de carga y manejo de errores.</li>
+                </ul>
+            </div>
+            <div class="item">
+                <h3>Campus Navigator: gestión académica por roles</h3>
+                <p class="meta">Python</p>
+                <ul>
+                    <li>Menús para camper, trainer y coordinador: consulta y registro de notas y reportes de bajo rendimiento.</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="cols">
+            <section>
+                <h2>Formación académica</h2>
+                <div class="item">
+                    <h3>Programa de Desarrollo de Software</h3>
+                    <p class="meta">Campuslands · Bucaramanga · En curso</p>
+                </div>
+                <div class="item">
+                    <h3>Bachiller</h3>
+                    <p class="meta">Instituto Santa Teresita · 2025</p>
+                </div>
+            </section>
+            <section>
+                <h2>Cursos e idiomas</h2>
+                <div class="item">
+                    <h3>Inglés: nivel B1</h3>
+                    <p class="meta">Smart</p>
+                </div>
+                <div class="item">
+                    <h3>Español</h3>
+                    <p class="meta">Nativo</p>
+                </div>
+            </section>
+        </div>
+
+        <section>
+            <h2>Habilidades blandas</h2>
+            <p>Comunicación · Respeto · Adaptabilidad · Aprendizaje rápido · Seguridad · Persistencia · Trabajo en equipo</p>
+        </section>
+
+        <section>
+            <h2>Experiencia laboral</h2>
+            <p>Sin experiencia laboral formal todavía. Mi experiencia práctica viene de los proyectos académicos y personales de esta hoja de vida, varios de ellos en equipo con Scrum.</p>
+        </section>
+    </main>
+</body>
+</html>

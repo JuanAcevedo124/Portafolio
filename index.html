@@ -3,340 +3,314 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Juan Acevedo — Desarrollador Web Full Stack con alma musical. Portafolio estilo concierto: tracks, vinilos y código con ritmo.">
-    <title>Juan Acevedo ♪ Live Code Session</title>
+    <meta name="description" content="Portafolio de Juan José Acevedo Morales, desarrollador de software junior con enfoque Backend Java y Full Stack. Bucaramanga, Colombia.">
+    <meta name="author" content="Juan José Acevedo Morales">
+    <title>Juan José Acevedo Morales | Desarrollador Backend Java · Full Stack</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="is-playing">
+<body>
 
-    <!-- Luces de escenario -->
-    <div class="stage-lights" aria-hidden="true">
-        <span class="light light--1"></span>
-        <span class="light light--2"></span>
-        <span class="light light--3"></span>
-    </div>
-    <div class="noise" aria-hidden="true"></div>
-    <div class="float-notes" aria-hidden="true">
-        <span>♪</span><span>♫</span><span>♩</span><span>♬</span><span>♪</span><span>♫</span><span>♩</span><span>♬</span>
-    </div>
-
-    <!-- Header estilo reproductor -->
-    <header class="header" role="banner">
-        <nav class="nav" role="navigation" aria-label="Navegación principal">
-            <div class="nav__container">
-                <a href="#inicio" class="nav__logo">
-                    <span class="logo-vinyl" aria-hidden="true"><span></span></span>
-                    JUAN ACEVEDO <em>live</em>
-                </a>
-                <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">
-                    <span></span><span></span><span></span>
-                </button>
-                <ul class="nav__menu">
-                    <li><a href="#inicio" class="nav__link"><b>01</b>Intro</a></li>
-                    <li><a href="#sobre-mi" class="nav__link"><b>02</b>Artista</a></li>
-                    <li><a href="#proyectos" class="nav__link"><b>03</b>Discografía</a></li>
-                    <li><a href="#habilidades" class="nav__link"><b>04</b>Mezclador</a></li>
-                    <li><a href="#contacto" class="nav__link nav__link--ticket">🎟 Encore</a></li>
-                    <li>
-                        <button id="playToggleNav" class="mini-play" aria-label="Pausar animación">
-                            <span class="mini-play__bars"><i></i><i></i><i></i><i></i></span>
-                            <span class="mini-play__label">LIVE</span>
-                        </button>
-                    </li>
-                </ul>
-            </div>
-            <div class="nav__progress"><span id="scrollProgress"></span></div>
+    <header class="header">
+        <nav class="nav container" aria-label="Navegación principal">
+            <a href="#inicio" class="nav__logo">Juan José Acevedo</a>
+            <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav__menu" id="menu">
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#formacion">Formación</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="cv.html" class="btn btn--small">Hoja de vida</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
-        <!-- HERO / ESCENARIO -->
-        <section id="inicio" class="hero" aria-labelledby="hero-title">
-            <div class="staff" aria-hidden="true">
-                <span></span><span></span><span></span><span></span><span></span>
-                <b class="clef">𝄞</b>
-            </div>
-
-            <div class="hero__container">
+        <!-- INICIO -->
+        <section id="inicio" class="hero">
+            <div class="container hero__inner">
                 <div class="hero__text">
-                    <p class="hero__kicker">
-                        <span class="live-dot"></span> ON STAGE · BOGOTÁ — FULL STACK SESSION
-                        <span class="hero__bpm">128 BPM</span>
+                    <p class="hero__kicker">Bucaramanga, Santander · Colombia</p>
+                    <h1>Juan José Acevedo Morales</h1>
+                    <p class="hero__role">Desarrollador de Software Junior · Backend Java &amp; Full Stack</p>
+                    <p class="hero__desc">
+                        Construyo aplicaciones con <strong>Java, MySQL y JavaScript</strong>: desde la lógica de negocio
+                        y la base de datos hasta la interfaz web. Me formo en Campuslands y aprendo cada día
+                        con proyectos reales.
                     </p>
-                    <h1 id="hero-title" class="hero__title">
-                        <span class="line line--small">Hola, soy</span>
-                        <span class="line line--name">JUAN <span class="outline">ACEVEDO</span></span>
-                        <span class="line line--role">compongo <span id="typewriter">interfaces que suenan bien</span><span class="caret">_</span></span>
-                    </h1>
-                    <p class="hero__description">
-                        Desarrollador Web Full Stack. Transformo ideas en experiencias digitales
-                        con el ritmo del frontend y el bajo sólido del backend.
-                    </p>
-
-                    <div class="eq eq--hero" aria-hidden="true">
-                        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                    </div>
-
                     <div class="hero__cta">
-                        <a href="#proyectos" class="btn btn--play"><span class="btn__icon">▶</span> Escuchar proyectos</a>
-                        <a href="#contacto" class="btn btn--ghost">🎟 Backstage pass</a>
+                        <a href="#proyectos" class="btn">Ver proyectos</a>
+                        <a href="cv.html" class="btn btn--outline">Hoja de vida</a>
                     </div>
-
-                    <div class="hero__meta">
-                        <div><strong>3+</strong><small>tracks publicados</small></div>
-                        <div><strong>Full Stack</strong><small>front + back</small></div>
-                        <div><strong>∞</strong><small>loops de café</small></div>
-                    </div>
+                    <ul class="hero__social">
+                        <li><a href="https://github.com/JuanAcevedo124" target="_blank" rel="noopener">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/juan-acevedo-b24759450/" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="mailto:juanacevedo1240@gmail.com">Correo</a></li>
+                    </ul>
                 </div>
-
-                <div class="hero__visual">
-                    <div class="turntable">
-                        <div class="turntable__ring"></div>
-                        <div class="vinyl" id="heroVinyl" aria-hidden="true">
-                            <div class="vinyl__grooves"></div>
-                            <div class="vinyl__label">
-                                <strong>JA</strong>
-                                <small>SIDE A · 33 RPM</small>
-                            </div>
-                            <div class="vinyl__hole"></div>
-                        </div>
-                        <div class="needle" aria-hidden="true"></div>
-                        <div class="now-spinning">
-                            <span class="spin-disc"></span>
-                            <div>
-                                <small>NOW SPINNING</small>
-                                <strong>Song.mp3 — instrumental propio ♪</strong>
-                            </div>
-                            <canvas id="visualizer" width="220" height="52"></canvas>
-                        </div>
-                    </div>
+                <div class="hero__photo">
+                    <!-- FOTO: guarda tu foto como img/foto.jpg, borra el <span> y quita el comentario del <img>. -->
+                    <!-- <img src="img/foto.jpg" alt="Fotografía de Juan José Acevedo Morales" width="260" height="260"> -->
+                    <span class="avatar" aria-hidden="true">JA</span>
                 </div>
             </div>
-
-            <a href="#sobre-mi" class="scroll-hint">scroll para el drop <i>↓</i></a>
         </section>
 
-        <!-- MARQUESINA -->
-        <div class="marquee" aria-hidden="true">
-            <div class="marquee__track">
-                <span>HTML5 ♪ CSS3 ♫ JAVASCRIPT ♩ PYTHON ♬ REACT ♪ NODE.JS ♫ GIT ♩ RESPONSIVE ♬ UI / UX ♪&nbsp;</span>
-                <span>HTML5 ♪ CSS3 ♫ JAVASCRIPT ♩ PYTHON ♬ REACT ♪ NODE.JS ♫ GIT ♩ RESPONSIVE ♬ UI / UX ♪&nbsp;</span>
-            </div>
-        </div>
-
-        <!-- SOBRE MI / TRACK 01 -->
-        <section id="sobre-mi" class="about reveal" aria-labelledby="about-title">
+        <!-- SOBRE MÍ -->
+        <section id="sobre-mi" class="section">
             <div class="container">
-                <p class="track-label">Track 01 · Lado A — El artista</p>
-                <h2 id="about-title" class="section__title">Detrás del <span class="neon">micrófono</span></h2>
-                <div class="about__content">
-                    <div class="about__cover">
-                        <div class="cover-art">
-                            <div class="cover-art__top">JA · DEBUT ALBUM</div>
-                            <div class="cover-art__face">JA</div>
-                            <div class="cover-art__bottom">
-                                <span>CÓDIGO · RITMO · DISEÑO</span>
-                                <span>2026</span>
-                            </div>
-                        </div>
-                        <div class="cover-vinyl" aria-hidden="true"></div>
-                        <p class="cover-caption">◉ portada del artista — pasa el cursor para sacar el vinilo</p>
-                    </div>
+                <h2 class="section__title">Sobre mí</h2>
+                <div class="about">
                     <div class="about__text">
-                        <p class="dropcap">
-                            Soy un desarrollador que produce la web como si fuera un disco:
-                            cada sección tiene su tempo, cada componente su timbre y cada
-                            deploy es un lanzamiento.
+                        <p>
+                            Soy Juan José, desarrollador de software en formación en <strong>Campuslands</strong>.
+                            He desarrollado sistemas de consola en Java con conexión a MySQL, bases de datos con
+                            triggers y funciones, y sitios web en JavaScript que consumen APIs y gestionan datos
+                            en el navegador.
                         </p>
                         <p>
-                            Me especializo en construir aplicaciones rápidas, accesibles y
-                            visualmente atractivas, con código limpio como una buena mezcla
-                            y colaboración afinada en equipo.
+                            Me gusta entender bien el problema antes de escribir código. Cuando algo no está
+                            claro, investigo por mi cuenta hasta llegar a un resultado correcto. Prefiero un sistema
+                            que funcione bien a uno que solo cumpla la lista de requisitos.
                         </p>
-                        <ul class="setlist">
-                            <li><span>♪ Verso 1</span> Frontend que engancha al primer beat</li>
-                            <li><span>♪ Coro</span> Backend sólido que sostiene la canción</li>
-                            <li><span>♪ Puente</span> Diseño responsive para todos los escenarios</li>
+                        <h3>Objetivo profesional</h3>
+                        <p>
+                            Integrarme a un equipo de desarrollo como <strong>desarrollador junior o practicante</strong>,
+                            aportando en la construcción de servicios backend con Java y bases de datos relacionales,
+                            y en interfaces web con JavaScript. Quiero seguir creciendo con buenas prácticas,
+                            revisión de código y metodologías ágiles.
+                        </p>
+                    </div>
+                    <aside class="card">
+                        <h3>Fortalezas</h3>
+                        <ul class="list-check">
+                            <li><strong>Comunicación:</strong> explico mis ideas y mis avances con claridad.</li>
+                            <li><strong>Respeto:</strong> valoro las opiniones del equipo y recibo el feedback con apertura.</li>
+                            <li><strong>Adaptabilidad:</strong> me ajusto a nuevas herramientas, lenguajes y requisitos.</li>
+                            <li><strong>Aprendizaje rápido:</strong> en Campuslands aprendí Python, JavaScript, Java, MySQL y Docker.</li>
+                            <li><strong>Seguridad:</strong> confío en mis decisiones técnicas y las sustento.</li>
+                            <li><strong>Persistencia:</strong> no abandono un problema hasta resolverlo.</li>
                         </ul>
-                        <div class="about__chips">
-                            <span>🎧 Escucho al usuario</span>
-                            <span>🎛 Mezclo diseño + código</span>
-                            <span>🔥 Masterizo el detalle</span>
-                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- HABILIDADES -->
+        <section id="habilidades" class="section section--alt">
+            <div class="container">
+                <h2 class="section__title">Conocimientos técnicos</h2>
+                <div class="skills">
+                    <div class="card">
+                        <h3>Lenguajes</h3>
+                        <ul class="tags"><li>Java</li><li>JavaScript (ES6+)</li><li>Python</li><li>SQL</li><li>HTML5</li><li>CSS3</li></ul>
+                    </div>
+                    <div class="card">
+                        <h3>Backend</h3>
+                        <ul class="tags"><li>POO</li><li>Principios SOLID</li><li>Patrones DAO, Singleton, Strategy, Observer, Facade</li><li>Arquitectura MVC</li><li>JDBC</li><li>Spring Boot (básico)</li></ul>
+                    </div>
+                    <div class="card">
+                        <h3>Bases de datos</h3>
+                        <ul class="tags"><li>MySQL</li><li>Modelado entidad-relación</li><li>Normalización</li><li>Funciones y triggers</li><li>Vistas y consultas</li></ul>
+                    </div>
+                    <div class="card">
+                        <h3>Frontend</h3>
+                        <ul class="tags"><li>Diseño responsive</li><li>Flexbox y Grid</li><li>Web Components</li><li>Manipulación del DOM</li><li>localStorage</li></ul>
+                    </div>
+                    <div class="card">
+                        <h3>APIs</h3>
+                        <ul class="tags"><li>Consumo de APIs REST con fetch</li><li>async / await</li><li>Manejo de errores y estados de carga</li></ul>
+                    </div>
+                    <div class="card">
+                        <h3>Herramientas</h3>
+                        <ul class="tags"><li>Git</li><li>GitHub</li><li>GitFlow</li><li>Docker / Docker Compose</li><li>VS Code</li><li>NetBeans</li><li>n8n</li></ul>
+                    </div>
+                    <div class="card">
+                        <h3>Pruebas y depuración</h3>
+                        <ul class="tags"><li>Depuración paso a paso</li><li>Excepciones personalizadas</li><li>Validación de datos</li><li>Pruebas unitarias (aprendiendo)</li></ul>
+                    </div>
+                    <div class="card">
+                        <h3>Metodologías</h3>
+                        <ul class="tags"><li>Scrum en proyectos de equipo</li><li>Control de versiones con ramas</li></ul>
+                    </div>
+                    <div class="card">
+                        <h3>Idiomas</h3>
+                        <ul class="tags"><li>Español nativo</li><li>Inglés B1 (Smart)</li></ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- PROYECTOS / DISCOGRAFÍA -->
-        <section id="proyectos" class="projects" aria-labelledby="projects-title">
+        <!-- PROYECTOS -->
+        <section id="proyectos" class="section">
             <div class="container">
-                <p class="track-label track-label--center">Track 02 · 03 · 04 — Discografía</p>
-                <h2 id="projects-title" class="section__title">Mis <span class="neon">lanzamientos</span></h2>
-                <p class="section__sub">Cada proyecto es un single. Dale play a la descripción y revisa el código en GitHub.</p>
+                <h2 class="section__title">Proyectos</h2>
+                <p class="section__sub">Proyectos académicos y personales desarrollados en Campuslands. Todos los hice yo y su código está en GitHub.</p>
 
-                <div class="projects__grid">
-                    <article class="disc reveal">
-                        <div class="disc__art disc__art--py">
-                            <span class="disc__genre">PYTHON · SINGLE 01</span>
-                            <span class="disc__emoji">🐍</span>
-                            <div class="disc__vinyl" aria-hidden="true"></div>
-                            <span class="disc__time">3:42</span>
+                <article class="project">
+                    <img src="img/proyectos/hotel.png" alt="Página de inicio del sistema de reservas Hotel El Rincón del Carmen" loading="lazy" width="1280" height="800">
+                    <div class="project__body">
+                        <h3>Hotel El Rincón del Carmen: sistema de reservas</h3>
+                        <ul class="tags tags--small"><li>HTML5</li><li>CSS3</li><li>JavaScript ES6+</li><li>Web Components</li><li>localStorage</li></ul>
+                        <dl class="project__info">
+                            <dt>Problema que resuelve</dt>
+                            <dd>Un hotel necesita que sus clientes busquen y reserven habitaciones en línea sin que se crucen las fechas, y que un administrador gestione habitaciones y reservas.</dd>
+                            <dt>Qué hace</dt>
+                            <dd>Registro e inicio de sesión, buscador por fechas y huéspedes con cálculo automático del precio, cancelación de reservas y panel administrativo (CRUD de habitaciones). Diseño mobile-first.</dd>
+                            <dt>Mi participación</dt>
+                            <dd>Proyecto individual: diseño, maquetación, componentes y lógica de negocio.</dd>
+                            <dt>Reto y solución</dt>
+                            <dd>Evitar reservas duplicadas. Escribí un algoritmo que compara los rangos de fechas antes de confirmar una reserva. Además separé la interfaz en Web Components reutilizables para que el código fuera mantenible.</dd>
+                        </dl>
+                        <div class="project__links">
+                            <a href="https://github.com/JuanAcevedo124/Proyecto-Javascript" class="btn btn--small" target="_blank" rel="noopener">Código fuente</a>
+                            <a href="https://juanacevedo124.github.io/Proyecto-Javascript/" class="btn btn--small btn--outline" target="_blank" rel="noopener">Ver demo</a>
                         </div>
-                        <div class="disc__content">
-                            <h3>Campus Navigator <small>— feat. Campuslands</small></h3>
-                            <div class="disc__eq" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
-                            <p>Sistema de navegación por roles para la comunidad de Campuslands: cada integrante tiene su propio menú y acceso rápido a la información.</p>
-                            <div class="disc__links">
-                                <a href="https://github.com/Jonathanluna0803/Proyecto_Python_LunaJonathan_AcevedoJuan/blob/main/Proyecto_Python" class="btn btn--small btn--play" target="_blank" rel="noopener">▶ Código</a>
-                                <a href="https://github.com/Jonathanluna0803/Proyecto_Python_LunaJonathan_AcevedoJuan.git" class="btn btn--small btn--ghost" target="_blank" rel="noopener">Repositorio</a>
-                            </div>
-                        </div>
-                    </article>
+                    </div>
+                </article>
 
-                    <article class="disc reveal">
-                        <div class="disc__art disc__art--shop">
-                            <span class="disc__genre">HTML + CSS · SINGLE 02</span>
-                            <span class="disc__emoji">🛍️</span>
-                            <div class="disc__vinyl" aria-hidden="true"></div>
-                            <span class="disc__time">4:05</span>
+                <article class="project">
+                    <img src="img/proyectos/crediya.png" alt="Consola del sistema CrediYa mostrando el menú principal y la lista de préstamos" loading="lazy" width="1280" height="800">
+                    <div class="project__body">
+                        <h3>CrediYa S.A.S.: sistema de préstamos y cobros</h3>
+                        <ul class="tags tags--small"><li>Java 17</li><li>MySQL</li><li>JDBC</li><li>POO</li><li>DAO + Singleton</li><li>Streams</li></ul>
+                        <dl class="project__info">
+                            <dt>Problema que resuelve</dt>
+                            <dd>Una empresa de créditos llevaba sus préstamos y pagos a mano. Necesitaba registrar empleados, clientes, préstamos y abonos, y consultar saldos y préstamos vencidos.</dd>
+                            <dt>Qué hace</dt>
+                            <dd>Aplicación de consola con cálculo automático de intereses y cuotas, historial de pagos y reportes. Guarda la información en archivos y en MySQL al mismo tiempo, y sigue funcionando con archivos si no hay conexión a la base de datos.</dd>
+                            <dt>Mi participación</dt>
+                            <dd>Proyecto individual: modelado de clases, base de datos, capa DAO y lógica de negocio.</dd>
+                            <dt>Reto y solución</dt>
+                            <dd>Mantener el código ordenado al crecer. Apliqué SOLID: un DAO por entidad, una clase solo para archivos, un Singleton para la conexión y un servicio para las reglas de negocio.</dd>
+                        </dl>
+                        <div class="project__links">
+                            <a href="https://github.com/JuanAcevedo124/CrediYa" class="btn btn--small" target="_blank" rel="noopener">Código fuente</a>
                         </div>
-                        <div class="disc__content">
-                            <h3>CampusShop <small>— maqueta e-commerce</small></h3>
-                            <div class="disc__eq" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
-                            <p>Maqueta de tienda para campers: productos económicos y material de estudio, simulando una página real de compras del campus.</p>
-                            <div class="disc__links">
-                                <a href="https://github.com/JuanAcevedo124/Proyecto-HTML-y-CSS/tree/main/CampusShop" class="btn btn--small btn--play" target="_blank" rel="noopener">▶ Código</a>
-                                <a href="https://github.com/JuanAcevedo124/Proyecto-HTML-y-CSS.git" class="btn btn--small btn--ghost" target="_blank" rel="noopener">Repositorio</a>
-                            </div>
-                        </div>
-                    </article>
+                    </div>
+                </article>
 
-                    <article class="disc reveal">
-                        <div class="disc__art disc__art--js">
-                            <span class="disc__genre">JAVASCRIPT · SINGLE 03</span>
-                            <span class="disc__emoji">🏨</span>
-                            <div class="disc__vinyl" aria-hidden="true"></div>
-                            <span class="disc__time">5:18</span>
+                <article class="project">
+                    <img src="img/proyectos/medisalud.png" alt="Consola del sistema MediSalud mostrando el menú principal" loading="lazy" width="1280" height="800">
+                    <div class="project__body">
+                        <h3>MediSalud: gestión de citas médicas</h3>
+                        <ul class="tags tags--small"><li>Java</li><li>MySQL</li><li>JDBC</li><li>Docker Compose</li><li>MVC</li><li>Patrones de diseño</li></ul>
+                        <dl class="project__info">
+                            <dt>Problema que resuelve</dt>
+                            <dd>Una clínica necesita agendar citas entre pacientes y médicos, llevar la historia clínica y facturar las consultas con distintas tarifas.</dd>
+                            <dt>Qué hace</dt>
+                            <dd>Registro de pacientes y médicos, agendamiento y cancelación de citas con motivo, historia clínica, facturación con recargo nocturno o descuento para afiliados, reportes y notificaciones.</dd>
+                            <dt>Mi participación</dt>
+                            <dd>Proyecto final del curso de Java, individual. Incluye la funcionalidad adicional de cancelación con motivo y la migración SQL correspondiente.</dd>
+                            <dt>Reto y solución</dt>
+                            <dd>Calcular distintos tipos de cobro sin llenar el código de condicionales. Usé el patrón Strategy para los costos, Observer para las notificaciones y una Fachada para simplificar el agendamiento. La base de datos corre en Docker.</dd>
+                        </dl>
+                        <div class="project__links">
+                            <a href="https://github.com/JuanAcevedo124/Gestion-de-citas-" class="btn btn--small" target="_blank" rel="noopener">Código fuente</a>
                         </div>
-                        <div class="disc__content">
-                            <h3>Hotel Manager <small>— full experience</small></h3>
-                            <div class="disc__eq" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
-                            <p>Gestión de reservas responsiva con autenticación, disponibilidad en tiempo real, anti-solapamientos y panel administrativo.</p>
-                            <div class="disc__links">
-                                <a href="https://github.com/JuanAcevedo124/Proyecto-Javascript/blob/master/index.html" class="btn btn--small btn--play" target="_blank" rel="noopener">▶ Código</a>
-                                <a href="https://github.com/JuanAcevedo124/Proyecto-Javascript" class="btn btn--small btn--ghost" target="_blank" rel="noopener">Repositorio</a>
-                            </div>
+                    </div>
+                </article>
+
+                <article class="project">
+                    <img src="img/proyectos/colombia-deptos.png" alt="Sección de departamentos del portal de Colombia con datos de la API" loading="lazy" width="1280" height="800">
+                    <div class="project__body">
+                        <h3>Mini portal de Colombia con API</h3>
+                        <ul class="tags tags--small"><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>fetch API</li><li>API REST</li></ul>
+                        <dl class="project__info">
+                            <dt>Problema que resuelve</dt>
+                            <dd>Reunir en un solo sitio información confiable y actualizada sobre los departamentos, la gastronomía y los presidentes de Colombia.</dd>
+                            <dt>Qué hace</dt>
+                            <dd>Consume la API pública api-colombia.com y muestra tres secciones: departamentos con conteo por región, platos típicos con filtro por región y presidentes ordenados por año de mandato.</dd>
+                            <dt>Mi participación</dt>
+                            <dd>Proyecto individual: consumo de la API, renderizado dinámico y diseño responsive.</dd>
+                            <dt>Reto y solución</dt>
+                            <dd>La API puede tardar o fallar. Implementé estados de carga y manejo de errores con try/catch para que el usuario siempre sepa qué está pasando.</dd>
+                        </dl>
+                        <div class="project__links">
+                            <a href="https://github.com/JuanAcevedo124/Juan-Acevedo-API-COLOMBIA" class="btn btn--small" target="_blank" rel="noopener">Código fuente</a>
+                            <a href="https://juanacevedo124.github.io/Juan-Acevedo-API-COLOMBIA/" class="btn btn--small btn--outline" target="_blank" rel="noopener">Ver demo</a>
                         </div>
-                    </article>
-                </div>
+                    </div>
+                </article>
+
+                <article class="project">
+                    <img src="img/proyectos/campus.png" alt="Código del menú por roles del proyecto Campus Navigator en Python" loading="lazy" width="1280" height="800">
+                    <div class="project__body">
+                        <h3>Campus Navigator: gestión académica por roles</h3>
+                        <ul class="tags tags--small"><li>Python</li><li>Estructuras de datos</li><li>Lógica de programación</li></ul>
+                        <dl class="project__info">
+                            <dt>Problema que resuelve</dt>
+                            <dd>En Campuslands, campers, trainers y coordinadores necesitan consultar y registrar información académica según su rol.</dd>
+                            <dt>Qué hace</dt>
+                            <dd>Menú por roles. El camper consulta sus datos, notas, ruta y trainer. El trainer registra notas, ve sus grupos y genera reportes de bajo rendimiento. El coordinador administra la información.</dd>
+                            <dt>Mi participación</dt>
+                            <dd>Desarrollé el proyecto completo. Fue mi primer proyecto de programación en Campuslands.</dd>
+                            <dt>Reto y solución</dt>
+                            <dd>Entender bien el problema y organizar mucha información sin bases de datos. Lo resolví con listas de diccionarios y menús por rol, investigando y probando hasta que cada flujo funcionó.</dd>
+                        </dl>
+                        <div class="project__links">
+                            <a href="https://github.com/Jonathanluna0803/Proyecto_Python_LunaJonathan_AcevedoJuan" class="btn btn--small" target="_blank" rel="noopener">Código fuente</a>
+                        </div>
+                    </div>
+                </article>
+
+                <p class="section__more">
+                    Más proyectos (bases de datos MySQL, Spring Boot, retos de Java y automatizaciones con n8n) en
+                    <a href="https://github.com/JuanAcevedo124?tab=repositories" target="_blank" rel="noopener">mi GitHub</a>.
+                </p>
             </div>
         </section>
 
-        <!-- HABILIDADES / MEZCLADOR -->
-        <section id="habilidades" class="skills" aria-labelledby="skills-title">
+        <!-- FORMACIÓN -->
+        <section id="formacion" class="section section--alt">
             <div class="container">
-                <p class="track-label track-label--center">Track 05 — Mezclador</p>
-                <h2 id="skills-title" class="section__title">Consola de <span class="neon">habilidades</span></h2>
-                <p class="section__sub">Dale play a tu instrumental y juega con los faders: cada canal filtra tu canción en vivo.</p>
-
-                <div class="song-transport reveal">
-                    <button id="songToggle" class="btn btn--play"><span class="btn__icon">▶</span> <span id="songToggleLabel">Tocar mi instrumental</span></button>
-                    <p id="songStatus" class="song-status">⏸ Song.mp3 en pausa — pulsa play (los navegadores exigen un clic para el audio)</p>
-                    <audio id="song" src="audio/Song.mp3" loop preload="auto"></audio>
-                </div>
-
-                <div class="mixer reveal">
-                    <div class="channel" data-band="high">
-                        <div class="channel__leds"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
-                        <h3>🎸 Frontend · Agudos</h3>
-                        <input type="range" class="fader" min="0" max="100" value="90" aria-label="Nivel frontend">
-                        <span class="channel__val">90%</span>
-                        <ul>
-                            <li>HTML5 & CSS3</li>
-                            <li>JavaScript (ES6+)</li>
-                            <li>React</li>
-                            <li>Responsive Design</li>
-                        </ul>
-                    </div>
-                    <div class="channel channel--bass" data-band="low">
-                        <div class="channel__leds"><i class="on"></i><i class="on"></i><i></i><i></i></div>
-                        <h3>🎹 Backend · Graves</h3>
-                        <input type="range" class="fader" min="0" max="100" value="75" aria-label="Nivel backend">
-                        <span class="channel__val">75%</span>
-                        <ul>
-                            <li>Node.js</li>
-                            <li>Express</li>
-                            <li>Bases de datos</li>
-                            <li>APIs REST</li>
-                        </ul>
-                    </div>
-                    <div class="channel channel--drums" data-band="mid">
-                        <div class="channel__leds"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
-                        <h3>🥁 Herramientas · Medios</h3>
-                        <input type="range" class="fader" min="0" max="100" value="85" aria-label="Nivel herramientas">
-                        <span class="channel__val">85%</span>
-                        <ul>
-                            <li>Git & GitHub</li>
-                            <li>VS Code</li>
-                            <li>Figma</li>
-                            <li>Terminal</li>
-                        </ul>
-                    </div>
-                </div>
+                <h2 class="section__title">Formación</h2>
+                <ol class="timeline">
+                    <li>
+                        <h3>Programa de Desarrollo de Software</h3>
+                        <p class="timeline__place">Campuslands · Bucaramanga · En curso</p>
+                        <p>Formación intensiva en programación: Python, HTML/CSS, JavaScript, Java, MySQL, Spring Boot, Git/GitHub, Docker y n8n, con proyectos en equipo bajo Scrum.</p>
+                    </li>
+                    <li>
+                        <h3>Inglés: nivel B1</h3>
+                        <p class="timeline__place">Smart</p>
+                        <p>Nivel intermedio: puedo leer documentación técnica y comunicarme en situaciones cotidianas.</p>
+                    </li>
+                    <li>
+                        <h3>Bachiller</h3>
+                        <p class="timeline__place">Instituto Santa Teresita · 2025</p>
+                    </li>
+                </ol>
             </div>
         </section>
 
-        <!-- CONTACTO / ENCORE -->
-        <section id="contacto" class="contact reveal" aria-labelledby="contact-title">
-            <div class="container">
-                <p class="track-label track-label--center">Último track — Encore</p>
-                <h2 id="contact-title" class="section__title">¿Pedimos <span class="neon">otra canción?</span></h2>
-                <p class="contact__subtitle">¿Tienes un proyecto en mente? Te regalo el backstage pass — conversemos.</p>
-
-                <div class="ticket">
-                    <div class="ticket__stub">
-                        <strong>ADMIT ONE</strong>
-                        <span>★ ★ ★</span>
-                        <small>JA LIVE 2026</small>
-                    </div>
-                    <div class="ticket__main">
-                        <p class="ticket__row"><span>ARTISTA</span> Juan Acevedo — Full Stack</p>
-                        <p class="ticket__row"><span>VENUE</span> Tu bandeja de entrada</p>
-                        <div class="contact__links">
-                            <a href="mailto:juanacevedo1240@gmail.com" class="contact__link contact__link--vip">📧 Email directo</a>
-                            <a href="https://github.com/JuanAcevedo124" class="contact__link" target="_blank" rel="noopener">💻 GitHub</a>
-                        </div>
-                    </div>
-                    <div class="ticket__perf"></div>
-                </div>
+        <!-- CONTACTO -->
+        <section id="contacto" class="section">
+            <div class="container contact">
+                <h2 class="section__title">Contacto</h2>
+                <p class="section__sub">Estoy buscando mi primera oportunidad como desarrollador junior o practicante. Escríbeme.</p>
+                <ul class="contact__list">
+                    <li><span>Correo</span><a href="mailto:juanacevedo1240@gmail.com">juanacevedo1240@gmail.com</a></li>
+                    <li><span>Teléfono / WhatsApp</span><a href="https://wa.me/573213051277" target="_blank" rel="noopener">+57 321 305 1277</a></li>
+                    <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/juan-acevedo-b24759450/" target="_blank" rel="noopener">linkedin.com/in/juan-acevedo-b24759450</a></li>
+                    <li><span>GitHub</span><a href="https://github.com/JuanAcevedo124" target="_blank" rel="noopener">github.com/JuanAcevedo124</a></li>
+                    <li><span>Ubicación</span>Bucaramanga, Santander, Colombia</li>
+                </ul>
+                <a href="cv.html" class="btn">Ver / descargar hoja de vida</a>
             </div>
         </section>
     </main>
 
-    <footer class="footer" role="contentinfo">
-        <div class="container footer__inner">
-            <p class="footer__eq" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></p>
-            <p>© 2026 Juan Acevedo · Gracias por escuchar hasta el final ♪</p>
-            <p class="footer__small">Hecho con código, café y buen ritmo.</p>
+    <footer class="footer">
+        <div class="container">
+            <p>© <span id="year">2026</span> Juan José Acevedo Morales</p>
         </div>
     </footer>
-
-    <!-- Player fijo estilo Spotify -->
-    <div class="player" role="complementary" aria-label="Reproductor del portafolio">
-        <button id="playToggle" class="player__btn" aria-label="Tocar instrumental">▶</button>
-        <div class="player__info">
-            <span class="player__cover">♪</span>
-            <div>
-                <strong id="playerTrack">Song.mp3 — instrumental propio</strong>
-                <small><span id="songTime">0:00 / 0:00</span> · scroll para cambiar de track · <span id="playerTime">0:00</span></small>
-            </div>
-        </div>
-        <div class="player__bar"><span id="playerBar"></span></div>
-    </div>
 
     <script src="js/main.js"></script>
 </body>
