@@ -218,8 +218,8 @@ h1, h2, h3 { line-height: 1.2; margin: 0 0 .5em; }
 }
 .hero__badge small { display: block; font: 500 .68rem/1.4 var(--mono); color: var(--text-dim); text-transform: uppercase; letter-spacing: .08em; }
 .hero__badge strong { font-size: .9rem; color: var(--gold-light); }
-.hero__badge--top { top: 8%; left: -18%; }
-.hero__badge--bottom { bottom: 6%; right: -12%; }
+.hero__badge--top { top: 4%; left: -34%; }
+.hero__badge--bottom { bottom: 2%; right: -16%; }
 
 /* Estadísticas */
 .stats {
@@ -413,7 +413,7 @@ h1, h2, h3 { line-height: 1.2; margin: 0 0 .5em; }
 /* ---------- Responsive ---------- */
 @media (max-width: 1024px) {
     .skills { grid-template-columns: repeat(2, 1fr); }
-    .hero__badge--top { left: -6%; }
+    .hero__badge--top { left: -22%; }
     .hero__badge--bottom { right: -4%; }
 }
 
