@@ -7,21 +7,25 @@
     <title>Hoja de vida | Juan José Acevedo Morales</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root { --text: #1f2933; --muted: #52606d; --primary: #1d4ed8; --border: #d9dee5; }
+        :root { --text: #1f2933; --muted: #52606d; --primary: #7a1626; --gold: #a8823a; --border: #e3d6b8; }
         * { box-sizing: border-box; }
         body { margin: 0; background: #eef1f5; font-family: "Inter", system-ui, sans-serif; color: var(--text); font-size: 14px; line-height: 1.55; }
         .toolbar { max-width: 820px; margin: 20px auto 0; padding: 0 16px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; }
         .toolbar a, .toolbar button { font: inherit; font-weight: 600; padding: .55em 1.1em; border-radius: 8px; border: 2px solid var(--primary); cursor: pointer; text-decoration: none; }
         .toolbar a { color: var(--primary); background: #fff; }
-        .toolbar .dl { background: var(--primary); color: #fff; }
-        .page { max-width: 820px; margin: 16px auto 40px; background: #fff; padding: 48px 52px; box-shadow: 0 2px 10px rgba(0,0,0,.08); }
-        h1 { font-size: 28px; margin: 0; }
+        body { background: #0b0909 !important; }
+        @media print { body { background: #fff !important; } }
+        .toolbar .dl { background: #d4af5f; border-color: #d4af5f; color: #1a1208; }
+        .toolbar button { background: transparent; color: #d4af5f; border-color: #d4af5f; }
+        .page { max-width: 820px; margin: 16px auto 40px; background: #fff; padding: 48px 52px; box-shadow: 0 2px 10px rgba(0,0,0,.08); border-top: 6px solid var(--primary); }
+        .toolbar > a { background: transparent; color: #d4af5f; border-color: #d4af5f; }
+        h1 { font-family: "Playfair Display", Georgia, serif; font-size: 30px; margin: 0; }
         .role { color: var(--primary); font-weight: 600; font-size: 16px; margin: 2px 0 10px; }
         .contact { display: flex; flex-wrap: wrap; gap: 4px 18px; color: var(--muted); padding: 0; margin: 0; list-style: none; }
         .contact a { color: var(--muted); }
-        h2 { font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--primary); border-bottom: 2px solid var(--border); padding-bottom: 4px; margin: 26px 0 10px; }
+        h2 { font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--primary); border-bottom: 2px solid var(--gold); padding-bottom: 4px; margin: 26px 0 10px; }
         p { margin: 0 0 8px; }
         .item { margin-bottom: 12px; }
         .item h3 { font-size: 14.5px; margin: 0; }
