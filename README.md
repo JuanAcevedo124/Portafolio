@@ -21,7 +21,7 @@ Portafolio profesional de **Juan José Acevedo Morales**, desarrollador de softw
 | CrediYa S.A.S. | Java, MySQL, JDBC | [CrediYa](https://github.com/JuanAcevedo124/CrediYa) |
 | MediSalud | Java, MySQL, Docker | [Gestion-de-citas-](https://github.com/JuanAcevedo124/Gestion-de-citas-) |
 | Mini portal de Colombia | JavaScript, API REST | [Juan-Acevedo-API-COLOMBIA](https://github.com/JuanAcevedo124/Juan-Acevedo-API-COLOMBIA) |
-| Campus Navigator | Python | [Proyecto_Python](https://github.com/Jonathanluna0803/Proyecto_Python_LunaJonathan_AcevedoJuan) |
+| Campus Navigator | Python | [Proyecto_Python](https://github.com/JuanAcevedo124/Proyecto_Python_LunaJonathan_AcevedoJuan) |
 
 ## Tecnologías del portafolio
 
