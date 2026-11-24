@@ -2,8 +2,9 @@
 
 Portafolio profesional de **Juan José Acevedo Morales**, desarrollador de software junior con enfoque **Backend Java y Full Stack**, en formación en Campuslands (Bucaramanga, Colombia).
 
-🔗 **Sitio:** https://juanacevedo124.github.io/Portafolio/
-📄 **Hoja de vida:** [cv.html](cv.html) · [PDF](cv/Juan-Jose-Acevedo-Morales-CV.pdf)
+**Sitio:** https://juanacevedo124.github.io/Portafolio/
+
+**Hoja de vida:** [cv.html](cv.html) · [PDF](cv/Juan-Jose-Acevedo-Morales-CV.pdf)
 
 ## Contenido
 
