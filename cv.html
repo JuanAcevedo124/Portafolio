@@ -3,54 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hoja de vida de Juan José Acevedo Morales, desarrollador de software junior.">
+    <meta name="description" content="Hoja de vida de Juan José Acevedo Morales, desarrollador de software junior con enfoque en backend Java.">
     <title>Hoja de vida | Juan José Acevedo Morales</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
     <style>
-        :root { --text: #1f2933; --muted: #52606d; --primary: #7a1626; --gold: #a8823a; --border: #e3d6b8; }
-        * { box-sizing: border-box; }
-        body { margin: 0; background: #eef1f5; font-family: "Inter", system-ui, sans-serif; color: var(--text); font-size: 14px; line-height: 1.55; }
-        .toolbar { max-width: 820px; margin: 20px auto 0; padding: 0 16px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; }
-        .toolbar a, .toolbar button { font: inherit; font-weight: 600; padding: .55em 1.1em; border-radius: 8px; border: 2px solid var(--primary); cursor: pointer; text-decoration: none; }
-        .toolbar a { color: var(--primary); background: #fff; }
-        body { background: #0b0909 !important; }
-        @media print { body { background: #fff !important; } }
-        .toolbar .dl { background: #d4af5f; border-color: #d4af5f; color: #1a1208; }
-        .toolbar button { background: transparent; color: #d4af5f; border-color: #d4af5f; }
-        .page { max-width: 820px; margin: 16px auto 40px; background: #fff; padding: 48px 52px; box-shadow: 0 2px 10px rgba(0,0,0,.08); border-top: 6px solid var(--primary); }
-        .toolbar > a { background: transparent; color: #d4af5f; border-color: #d4af5f; }
-        h1 { font-family: "Playfair Display", Georgia, serif; font-size: 30px; margin: 0; }
-        .role { color: var(--primary); font-weight: 600; font-size: 16px; margin: 2px 0 10px; }
-        .contact { display: flex; flex-wrap: wrap; gap: 4px 18px; color: var(--muted); padding: 0; margin: 0; list-style: none; }
-        .contact a { color: var(--muted); }
-        h2 { font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--primary); border-bottom: 2px solid var(--gold); padding-bottom: 4px; margin: 26px 0 10px; }
-        .cv-head { display: flex; align-items: center; gap: 24px; }
-        .cv-photo { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 3px solid var(--gold); }
-        @media (max-width: 640px) { .cv-head { flex-direction: column; align-items: flex-start; } }
-        p { margin: 0 0 8px; }
-        .item { margin-bottom: 12px; }
-        .item h3 { font-size: 14.5px; margin: 0; }
-        .item .meta { color: var(--muted); font-size: 13px; }
-        .item ul { margin: 4px 0 0; padding-left: 18px; }
-        .skills { display: grid; grid-template-columns: 170px 1fr; gap: 4px 12px; margin: 0; }
-        .skills dt { font-weight: 600; }
-        .skills dd { margin: 0; }
-        .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; }
-        @media (max-width: 640px) {
-            .page { padding: 28px 20px; }
-            .skills, .cols { grid-template-columns: 1fr; }
-            .skills dd { margin-bottom: 6px; }
+        :root {
+            --text: #1d1a1a; --muted: #5b5552; --soft: #8a817c;
+            --wine: #7a1626; --wine-soft: #f7eef0;
+            --gold: #a8823a; --gold-soft: #faf5ea; --line: #e6dcc8;
         }
-        @page { size: A4; margin: 14mm; }
+        * { box-sizing: border-box; }
+        body { margin: 0; background: #0b0909; font-family: "Inter", system-ui, sans-serif; color: var(--text); font-size: 13px; line-height: 1.5; }
+        a { color: inherit; }
+
+        .toolbar { max-width: 860px; margin: 20px auto 0; padding: 0 16px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; }
+        .toolbar a, .toolbar button { font: inherit; font-weight: 600; font-size: 14px; padding: .55em 1.1em; border-radius: 8px; border: 2px solid #d4af5f; cursor: pointer; text-decoration: none; background: transparent; color: #d4af5f; }
+        .toolbar .dl { background: #d4af5f; color: #1a1208; }
+
+        .page { max-width: 860px; margin: 16px auto 40px; background: #fff; padding: 40px 46px 44px; border-top: 6px solid var(--wine); }
+
+        /* Encabezado */
+        .head { display: grid; grid-template-columns: 120px 1fr; gap: 26px; align-items: center; padding-bottom: 18px; border-bottom: 3px solid var(--wine); }
+        .photo { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid var(--gold); }
+        h1 { font-family: "Playfair Display", Georgia, serif; font-size: 30px; line-height: 1.1; margin: 0; letter-spacing: .02em; text-transform: uppercase; color: var(--wine); }
+        .role { margin: 6px 0 12px; font-weight: 600; font-size: 14px; color: var(--gold); }
+        .head p { text-align: left; }
+        .contact { display: grid; grid-template-columns: 1fr 1.15fr; gap: 3px 22px; margin: 0; padding: 0; list-style: none; font-size: 12.5px; color: var(--muted); }
+        .contact b { color: var(--text); font-weight: 600; }
+        .contact a { color: var(--wine); text-decoration: none; }
+
+        /* Secciones */
+        h2 { display: flex; align-items: center; gap: 12px; margin: 24px 0 12px; font-size: 13.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--text); }
+        h2::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold), transparent); }
+        h2 span { color: var(--wine); font-family: "JetBrains Mono", monospace; font-size: 11.5px; }
+        p { margin: 0 0 8px; text-align: justify; }
+
+        /* Habilidades */
+        .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .card { border: 1px solid var(--line); border-left: 3px solid var(--wine); border-radius: 6px; padding: 10px 13px; background: #fff; break-inside: avoid; }
+        .card.soft { border-left-color: var(--gold); background: var(--gold-soft); }
+        .card h3 { margin: 0 0 4px; font-size: 13px; }
+        .card h3 small { font-weight: 500; color: var(--soft); }
+        .card p { margin: 0; font-size: 12.3px; color: var(--muted); text-align: left; }
+        .card p b { color: var(--text); }
+
+        /* Proyectos */
+        .feature { border: 1px solid var(--line); border-left: 4px solid var(--wine); border-radius: 6px; padding: 14px 16px; background: linear-gradient(180deg, var(--wine-soft), #fff 60%); break-inside: avoid; }
+        .ptitle { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+        .ptitle h3 { margin: 0; font-size: 14.5px; }
+        .meta { margin: 2px 0 6px; font-size: 12px; font-style: italic; color: var(--soft); }
+        .meta a { color: var(--wine); font-style: normal; text-decoration: none; }
+        .label { flex-shrink: 0; font-size: 9.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; background: var(--gold-soft); color: var(--gold); border: 1px solid #ead9b3; }
+        .label.wine { background: var(--wine-soft); color: var(--wine); border-color: #e9c9cf; }
+        ul { margin: 4px 0 8px; padding-left: 17px; }
+        li { margin-bottom: 2px; }
+        .tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 6px; }
+        .tags span { font-size: 10.8px; font-weight: 600; padding: 2px 7px; border-radius: 4px; border: 1px solid var(--line); background: #fbfaf8; color: var(--muted); }
+        .projects .card p { font-size: 12.2px; }
+        .projects .card .meta { margin: 1px 0 5px; }
+
+        /* Experiencia */
+        .exp-head { display: flex; justify-content: space-between; gap: 12px; }
+        .exp-head h3 { margin: 0; font-size: 14px; }
+        .exp-head .date { font-weight: 600; color: var(--soft); white-space: nowrap; }
+        .org { margin: 1px 0 4px; color: var(--wine); font-weight: 600; font-size: 12.5px; }
+
+        .edu .card h3 { margin-bottom: 1px; }
+        .edu .org { margin: 0 0 2px; }
+        .edu .date { font-size: 12px; color: var(--soft); margin-bottom: 3px; }
+
+        .langs { display: flex; flex-wrap: wrap; gap: 8px 28px; border: 1px solid var(--line); border-radius: 6px; padding: 9px 14px; background: #fbfaf8; }
+        .langs b { color: var(--wine); }
+
+        @media (max-width: 680px) {
+            .page { padding: 26px 18px; }
+            .head { grid-template-columns: 1fr; justify-items: start; }
+            .contact, .grid2 { grid-template-columns: 1fr; }
+            .ptitle, .exp-head { flex-direction: column; gap: 4px; }
+            p { text-align: left; }
+        }
+
+        @page { size: A4; margin: 12mm 12mm 12mm; }
         @media print {
-            body { background: #fff; font-size: 12.5px; }
+            body { background: #fff; font-size: 11.6px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
             .toolbar { display: none; }
-            .page { box-shadow: none; margin: 0; padding: 0; max-width: none; }
-            h2 { margin-top: 18px; }
-            a { text-decoration: none; }
-            .item { break-inside: avoid; }
+            .page { margin: 0; padding: 0; max-width: none; border-top: 0; }
+            h2 { margin: 16px 0 9px; break-after: avoid; }
+            .card p, .projects .card p { font-size: 11.2px; }
+            .avoid { break-inside: avoid; }
         }
     </style>
 </head>
@@ -64,125 +106,203 @@
     </div>
 
     <main class="page">
-        <header class="cv-head">
-            <img class="cv-photo" src="img/foto-cv.jpg" alt="Fotografía de Juan José Acevedo Morales" width="120" height="120">
+        <header class="head">
+            <img class="photo" src="img/foto-cv.jpg" alt="Fotografía de Juan José Acevedo Morales" width="120" height="120">
             <div>
-            <h1>Juan José Acevedo Morales</h1>
-            <p class="role">Desarrollador de Software Junior · Backend Java &amp; Full Stack</p>
-            <ul class="contact">
-                <li>Bucaramanga, Santander, Colombia</li>
-                <li>+57 321 305 1277</li>
-                <li><a href="mailto:juanacevedo1240@gmail.com">juanacevedo1240@gmail.com</a></li>
-                <li><a href="https://www.linkedin.com/in/juan-acevedo-b24759450/">linkedin.com/in/juan-acevedo-b24759450</a></li>
-                <li><a href="https://github.com/JuanAcevedo124">github.com/JuanAcevedo124</a></li>
-                <li><a href="https://juanacevedo124.github.io/Portafolio/">juanacevedo124.github.io/Portafolio</a></li>
-            </ul>
+                <h1>Juan José Acevedo Morales</h1>
+                <p class="role">Desarrollador de Software Junior | Backend Java &amp; Spring Boot | Full Stack</p>
+                <ul class="contact">
+                    <li><b>Teléfono:</b> +57 321 305 1277</li>
+                    <li><b>Correo:</b> <a href="mailto:juanacevedo1240@gmail.com">juanacevedo1240@gmail.com</a></li>
+                    <li><b>Ubicación:</b> Bucaramanga, Colombia</li>
+                    <li><b>Portafolio:</b> <a href="https://juanacevedo124.github.io/Portafolio/">juanacevedo124.github.io/Portafolio</a></li>
+                    <li><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/juan-acevedo-b24759450/">in/juan-acevedo-b24759450</a></li>
+                    <li><b>GitHub:</b> <a href="https://github.com/JuanAcevedo124">github.com/JuanAcevedo124</a></li>
+                </ul>
             </div>
         </header>
 
         <section>
-            <h2>Perfil profesional</h2>
+            <h2><span>01</span> Perfil profesional</h2>
             <p>
-                Desarrollador de software en formación en Campuslands, con enfoque en backend con Java y MySQL
-                y experiencia práctica en desarrollo web con JavaScript. He construido sistemas de gestión con
-                programación orientada a objetos, principios SOLID, patrones de diseño y conexión a bases de datos
-                con JDBC, además de sitios responsive que consumen APIs REST. Persistente, de aprendizaje rápido
-                y orientado a entregar soluciones que funcionen correctamente.
+                Desarrollador de software junior en formación intensiva en Campuslands, con enfoque en el desarrollo
+                backend con Java y bases de datos relacionales en MySQL, y experiencia práctica en aplicaciones web con
+                JavaScript. He construido sistemas de gestión completos aplicando programación orientada a objetos,
+                principios SOLID y patrones de diseño, con persistencia mediante JDBC y bases de datos ejecutadas en Docker.
             </p>
             <p>
-                <strong>Objetivo:</strong> integrarme a un equipo de desarrollo como desarrollador junior o practicante,
-                aportar en servicios backend y aplicaciones web, y seguir creciendo bajo buenas prácticas y metodologías ágiles.
+                Me caracterizo por la comunicación, la adaptabilidad, el aprendizaje rápido y la persistencia: cuando un
+                requerimiento no está claro, investigo y pruebo hasta entregar una solución que funcione correctamente.
+                Busco mi primera oportunidad como desarrollador junior o practicante para aportar en servicios backend y
+                aplicaciones web dentro de un equipo que trabaje con buenas prácticas y metodologías ágiles.
             </p>
         </section>
 
         <section>
-            <h2>Conocimientos técnicos</h2>
-            <dl class="skills">
-                <dt>Lenguajes</dt><dd>Java, JavaScript (ES6+), Python, SQL, HTML5, CSS3</dd>
-                <dt>Backend</dt><dd>POO, SOLID, patrones DAO / Singleton / Strategy / Observer / Facade, MVC, JDBC, Spring Boot (básico)</dd>
-                <dt>Bases de datos</dt><dd>MySQL: modelado entidad-relación, normalización, funciones, triggers, vistas</dd>
-                <dt>Frontend</dt><dd>Diseño responsive (Flexbox, Grid), Web Components, DOM, localStorage</dd>
-                <dt>APIs</dt><dd>Consumo de APIs REST con fetch y async/await, manejo de errores</dd>
-                <dt>Herramientas</dt><dd>Git, GitHub, GitFlow, Docker / Docker Compose, VS Code, NetBeans, n8n</dd>
-                <dt>Pruebas</dt><dd>Depuración, validaciones, excepciones personalizadas; aprendiendo pruebas unitarias</dd>
-                <dt>Metodologías</dt><dd>Scrum en proyectos de equipo</dd>
-            </dl>
-        </section>
-
-        <section>
-            <h2>Proyectos</h2>
-            <div class="item">
-                <h3>CrediYa S.A.S.: sistema de préstamos y cobros</h3>
-                <p class="meta">Java 17 · MySQL · JDBC · DAO + Singleton · <a href="https://github.com/JuanAcevedo124/CrediYa">github.com/JuanAcevedo124/CrediYa</a></p>
-                <ul>
-                    <li>Gestión de empleados, clientes, préstamos y abonos, con cálculo automático de intereses y cuotas.</li>
-                    <li>Persistencia en archivos y MySQL a la vez, con respaldo en archivos si no hay conexión.</li>
-                </ul>
-            </div>
-            <div class="item">
-                <h3>MediSalud: gestión de citas médicas</h3>
-                <p class="meta">Java · MySQL · Docker Compose · MVC · <a href="https://github.com/JuanAcevedo124/Gestion-de-citas-">github.com/JuanAcevedo124/Gestion-de-citas-</a></p>
-                <ul>
-                    <li>Agendamiento y cancelación de citas con motivo, historia clínica, facturación y reportes.</li>
-                    <li>Patrones Strategy (tarifas), Observer (notificaciones) y Facade; base de datos en Docker.</li>
-                </ul>
-            </div>
-            <div class="item">
-                <h3>Hotel El Rincón del Carmen: sistema de reservas web</h3>
-                <p class="meta">JavaScript · Web Components · HTML5 · CSS3 · <a href="https://github.com/JuanAcevedo124/Proyecto-Javascript">github.com/JuanAcevedo124/Proyecto-Javascript</a></p>
-                <ul>
-                    <li>Autenticación, búsqueda por fechas con cálculo de precio, validación contra reservas cruzadas y panel administrativo.</li>
-                </ul>
-            </div>
-            <div class="item">
-                <h3>Mini portal de Colombia con API</h3>
-                <p class="meta">JavaScript · fetch · API REST · <a href="https://github.com/JuanAcevedo124/Juan-Acevedo-API-COLOMBIA">github.com/JuanAcevedo124/Juan-Acevedo-API-COLOMBIA</a></p>
-                <ul>
-                    <li>Consumo de api-colombia.com con conteo por región, ordenamiento, estados de carga y manejo de errores.</li>
-                </ul>
-            </div>
-            <div class="item">
-                <h3>Campus Navigator: gestión académica por roles</h3>
-                <p class="meta">Python · <a href="https://github.com/JuanAcevedo124/Proyecto_Python_LunaJonathan_AcevedoJuan">github.com/JuanAcevedo124/Proyecto_Python_LunaJonathan_AcevedoJuan</a></p>
-                <ul>
-                    <li>Menús para camper, trainer y coordinador: consulta y registro de notas y reportes de bajo rendimiento.</li>
-                </ul>
+            <h2><span>02</span> Habilidades aplicadas en proyectos</h2>
+            <div class="grid2">
+                <div class="card">
+                    <h3>Backend y arquitectura en Java <small>(técnica)</small></h3>
+                    <p>POO, principios <b>SOLID</b>, arquitectura <b>MVC</b> y patrones DAO, Singleton, Builder, Strategy, Observer, State, Decorator y Facade aplicados en <b>MediSalud</b> y <b>CrediYa</b>. Excepciones propias, Streams, lambdas y concurrencia.</p>
+                </div>
+                <div class="card">
+                    <h3>Bases de datos relacionales <small>(técnica)</small></h3>
+                    <p>Modelado entidad-relación y normalización en <b>MySQL</b>; funciones, procedimientos almacenados, triggers y vistas en <b>Eventos Premier</b>; conexión desde Java con <b>JDBC</b> y migraciones de esquema.</p>
+                </div>
+                <div class="card">
+                    <h3>APIs REST y Spring Boot <small>(técnica)</small></h3>
+                    <p>Controladores, servicios, inyección de dependencias, beans y configuración externa con <b>@Value</b> en <b>Spring Boot</b>; pruebas de endpoints con Postman. Consumo de APIs REST con fetch y async/await.</p>
+                </div>
+                <div class="card">
+                    <h3>Frontend web <small>(técnica)</small></h3>
+                    <p><b>JavaScript ES6+</b> con módulos y <b>Web Components</b> nativos, HTML5 semántico, CSS3 con Grid y Flexbox, diseño responsive mobile-first y persistencia en localStorage en el <b>sistema de reservas de hotel</b>.</p>
+                </div>
+                <div class="card">
+                    <h3>Herramientas y entorno <small>(técnica)</small></h3>
+                    <p><b>Git</b> y GitHub con GitFlow, <b>Docker</b> y Docker Compose para bases de datos, GitHub Pages para despliegue, automatización de flujos con <b>n8n</b>, VS Code, IntelliJ y NetBeans.</p>
+                </div>
+                <div class="card soft">
+                    <h3>Trabajo en equipo y comunicación <small>(blanda)</small></h3>
+                    <p>Proyectos en equipo bajo <b>Scrum</b>, con reparto de tareas y entregas por sprint. Comunicación clara, respeto y seguridad al exponer y sustentar soluciones técnicas.</p>
+                </div>
+                <div class="card soft">
+                    <h3>Aprendizaje y resolución de problemas <small>(blanda)</small></h3>
+                    <p>Aprendizaje rápido de nuevas tecnologías, adaptabilidad y persistencia: análisis del enunciado, investigación y depuración hasta resolver errores de entorno, lógica y base de datos.</p>
+                </div>
+                <div class="card soft">
+                    <h3>Calidad y buenas prácticas <small>(blanda)</small></h3>
+                    <p>Código organizado por capas, validaciones de entrada, manejo de errores, documentación de cada proyecto en README y control de versiones con commits descriptivos.</p>
+                </div>
             </div>
         </section>
 
-        <div class="cols">
-            <section>
-                <h2>Formación académica</h2>
-                <div class="item">
+        <section class="avoid">
+            <h2><span>03</span> Proyecto principal</h2>
+            <article class="feature">
+                <div class="ptitle">
+                    <h3>MediSalud: sistema de gestión de citas médicas</h3>
+                    <span class="label wine">Java + MySQL + Docker</span>
+                </div>
+                <p class="meta">Campuslands · Proyecto final del curso de Java · 2026 · <a href="https://github.com/JuanAcevedo124/Gestion-de-citas-">github.com/JuanAcevedo124/Gestion-de-citas-</a></p>
+                <p>Aplicación de consola para administrar pacientes, médicos, citas, historias clínicas y facturación de una clínica, organizada por capas (entidades, repositorios, servicios, controlador y vista) con base de datos MySQL en Docker.</p>
+                <ul>
+                    <li>Agendamiento y cancelación de citas con motivo, y ciclo de estados validado con el patrón <b>State</b> (excepción ante transiciones inválidas).</li>
+                    <li>Facturación con tarifas por tipo de consulta (<b>Strategy</b>) y recargo nocturno o descuento para afiliados (<b>Decorator</b>).</li>
+                    <li>Notificaciones de cambios de cita con <b>Observer</b> ejecutadas en un hilo en segundo plano; códigos generados de forma segura con <b>AtomicLong</b>.</li>
+                    <li>Historia clínica construida con <b>Builder</b> y punto de entrada simplificado para el agendamiento con <b>Facade</b>.</li>
+                    <li>Persistencia con <b>JDBC</b> y DAO por entidad, respaldo en archivos y serialización, y migración SQL para nuevas columnas.</li>
+                    <li>Reportes con Stream API: citas, facturación y cancelaciones por médico, y pacientes por rango de edad.</li>
+                </ul>
+                <div class="tags"><span>Java</span><span>MySQL</span><span>JDBC</span><span>Docker Compose</span><span>MVC</span><span>Patrones de diseño</span><span>Stream API</span><span>Concurrencia</span></div>
+            </article>
+        </section>
+
+        <section class="projects">
+            <h2><span>04</span> Otros proyectos desarrollados</h2>
+            <div class="grid2">
+                <article class="card">
+                    <div class="ptitle"><h3>CrediYa S.A.S.: préstamos y cobros</h3><span class="label wine">Java</span></div>
+                    <p class="meta">Java 17 · MySQL · JDBC · 2026</p>
+                    <p>Gestión de empleados, clientes, préstamos y abonos con cálculo automático de intereses y cuotas, reportes de cartera y morosos, y respaldo en archivos cuando MySQL no está disponible.</p>
+                    <div class="tags"><span>POO</span><span>SOLID</span><span>DAO</span><span>Singleton</span></div>
+                </article>
+                <article class="card">
+                    <div class="ptitle"><h3>Hotel El Rincón del Carmen</h3><span class="label">Demo en vivo</span></div>
+                    <p class="meta">JavaScript · Web Components · 2026</p>
+                    <p>Sistema web de reservas con registro de usuarios, búsqueda por fechas con cálculo de precio, validación contra reservas cruzadas y panel administrativo.</p>
+                    <div class="tags"><span>JavaScript ES6+</span><span>HTML5</span><span>CSS3</span><span>Responsive</span></div>
+                </article>
+                <article class="card">
+                    <div class="ptitle"><h3>Mini portal de Colombia</h3><span class="label">Demo en vivo</span></div>
+                    <p class="meta">JavaScript · API REST · 2026</p>
+                    <p>Sitio que consume la API pública api-colombia.com para mostrar departamentos, platos típicos y presidentes, con estados de carga y manejo de errores.</p>
+                    <div class="tags"><span>fetch</span><span>async/await</span><span>API REST</span></div>
+                </article>
+                <article class="card">
+                    <div class="ptitle"><h3>Eventos Premier S.A.S.</h3><span class="label wine">MySQL</span></div>
+                    <p class="meta">MySQL · Modelado relacional · 2026</p>
+                    <p>Base de datos de reservas de salones, clientes y pagos con cálculo del valor con IVA, validación de disponibilidad, funciones, triggers, vistas y auditoría de precios.</p>
+                    <div class="tags"><span>SQL</span><span>Triggers</span><span>Vistas</span><span>Funciones</span></div>
+                </article>
+                <article class="card">
+                    <div class="ptitle"><h3>API REST con Spring Boot</h3><span class="label wine">Spring Boot</span></div>
+                    <p class="meta">Java · Spring Boot · Maven · 2026</p>
+                    <p>Primer servicio con Spring Boot: endpoints GET, capa de servicios, inyección de dependencias, beans definidos con @Configuration y mensajes leídos desde la configuración externa.</p>
+                    <div class="tags"><span>Spring Boot</span><span>REST</span><span>Maven</span><span>Postman</span></div>
+                </article>
+                <article class="card">
+                    <div class="ptitle"><h3>Campus Navigator</h3><span class="label">Proyecto en pareja</span></div>
+                    <p class="meta">Python · JSON · 2026</p>
+                    <p>Gestión académica por roles (camper, trainer y coordinador): registro y consulta de notas y reportes de bajo rendimiento, con datos persistidos en archivos JSON.</p>
+                    <div class="tags"><span>Python</span><span>JSON</span><span>Menús por rol</span></div>
+                </article>
+                <article class="card">
+                    <div class="ptitle"><h3>Gestión de torneos deportivos</h3><span class="label wine">Java</span></div>
+                    <p class="meta">Java · POO · 2026</p>
+                    <p>Registro de equipos, jugadores y entrenadores, programación de partidos, captura de resultados y cálculo automático de la tabla de posiciones.</p>
+                    <div class="tags"><span>Herencia</span><span>Polimorfismo</span><span>Colecciones</span></div>
+                </article>
+                <article class="card">
+                    <div class="ptitle"><h3>Modelado de bases de datos</h3><span class="label wine">MySQL</span></div>
+                    <p class="meta">Centro de salud y videoclub · 2026</p>
+                    <p>Diseño entidad-relación y normalización de dos sistemas: personal médico, sustituciones y vacaciones; y socios, catálogo e historial de alquileres.</p>
+                    <div class="tags"><span>Modelo E-R</span><span>Normalización</span><span>SQL</span></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="avoid">
+            <h2><span>05</span> Experiencia práctica</h2>
+            <div class="exp-head">
+                <h3>Desarrollador de software en formación intensiva</h3>
+                <span class="date">Enero 2026 – Actualidad</span>
+            </div>
+            <p class="org">Campuslands · Bucaramanga, Santander</p>
+            <ul>
+                <li>Desarrollo de proyectos individuales y en equipo con Scrum, con entregas por sprint y sustentación ante evaluadores.</li>
+                <li>Construcción de aplicaciones backend en Java conectadas a MySQL, aplicando POO, SOLID y patrones de diseño.</li>
+                <li>Desarrollo de aplicaciones web con JavaScript, consumo de APIs REST y publicación en GitHub Pages.</li>
+                <li>Uso diario de Git y GitHub (GitFlow, ramas y commits descriptivos), Docker para bases de datos y n8n para automatización.</li>
+            </ul>
+            <p style="color:var(--muted)">Aún no cuento con experiencia laboral formal; mi experiencia proviene de los proyectos descritos en esta hoja de vida.</p>
+        </section>
+
+        <section class="edu avoid">
+            <h2><span>06</span> Educación y formación</h2>
+            <div class="grid2">
+                <div class="card">
                     <h3>Programa de Desarrollo de Software</h3>
-                    <p class="meta">Campuslands · Bucaramanga · Enero 2026 – actualidad</p>
+                    <p class="org">Campuslands</p>
+                    <div class="date">Enero 2026 – Actualidad · En curso</div>
+                    <p>Python, HTML, CSS, JavaScript, Java, MySQL, Spring Boot, Git, Docker y n8n.</p>
                 </div>
-                <div class="item">
+                <div class="card">
                     <h3>Bachiller</h3>
-                    <p class="meta">Instituto Santa Teresita · 2025</p>
+                    <p class="org">Instituto Santa Teresita</p>
+                    <div class="date">2025 · Graduado</div>
+                    <p>Educación media completa.</p>
                 </div>
-            </section>
-            <section>
-                <h2>Cursos e idiomas</h2>
-                <div class="item">
+                <div class="card soft">
                     <h3>Inglés: nivel B1</h3>
-                    <p class="meta">Smart</p>
+                    <p class="org">Smart</p>
+                    <div class="date">Certificado</div>
+                    <p>Lectura de documentación técnica y comunicación básica profesional.</p>
                 </div>
-                <div class="item">
-                    <h3>Español</h3>
-                    <p class="meta">Nativo</p>
+                <div class="card soft">
+                    <h3>Aprendiendo actualmente</h3>
+                    <p class="org">Autoformación</p>
+                    <div class="date">2026</div>
+                    <p>Pruebas unitarias con JUnit y profundización en Spring Boot.</p>
                 </div>
-            </section>
-        </div>
-
-        <section>
-            <h2>Habilidades blandas</h2>
-            <p>Comunicación · Respeto · Adaptabilidad · Aprendizaje rápido · Seguridad · Persistencia · Trabajo en equipo</p>
+            </div>
         </section>
 
-        <section>
-            <h2>Experiencia laboral</h2>
-            <p>Sin experiencia laboral formal todavía. Mi experiencia práctica viene de los proyectos académicos y personales de esta hoja de vida, varios de ellos en equipo con Scrum.</p>
+        <section class="avoid">
+            <h2><span>07</span> Idiomas</h2>
+            <div class="langs">
+                <div><b>Español:</b> nativo</div>
+                <div><b>Inglés:</b> B1 (intermedio), lectura de documentación técnica</div>
+            </div>
         </section>
     </main>
 </body>
